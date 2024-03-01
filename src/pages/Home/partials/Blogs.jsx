@@ -21,16 +21,16 @@ const Blogs = () => {
             className="col-span-12 md:col-span-6 border rounded-xl shadow-sm group hover:shadow-none duration-300"
           >
             <div className="grid grid-cols-12 items-center gap-x-5">
-              <div className="col-span-6 h-full">
-                <figure className="flex-1 h-full overflow-hidden">
+              <div className="col-span-12 sm:col-span-6 h-full">
+                <figure className="flex-1 h-64 sm:h-full overflow-hidden">
                   <img
                     src="../../../../images/home/blog-1.png"
                     alt="blog"
-                    className="rounded-l-xl w-full h-full object-cover group-hover:scale-125 duration-300"
+                    className="rounded-t-xl sm:rounded-l-xl w-full h-full object-cover group-hover:scale-125 duration-300"
                   />
                 </figure>
               </div>
-              <div className="col-span-6 py-6 pe-6">
+              <div className="col-span-12 sm:col-span-6 py-6 pe-6 ps-6 sm:ps-0">
                 <h2 className="text-[#121212] text-2xl font-semibold group-hover:text-primary duration-300">
                   We Protecting Your Digital Assets
                 </h2>
@@ -51,16 +51,16 @@ const Blogs = () => {
             className="col-span-12 md:col-span-6 border rounded-xl shadow-sm group hover:shadow-none duration-300"
           >
             <div className="grid grid-cols-12 items-center gap-x-5">
-              <div className="col-span-6 h-full">
-                <figure className="flex-1 h-full overflow-hidden">
+              <div className="col-span-12 sm:col-span-6 h-full">
+                <figure className="flex-1 h-64 sm:h-full overflow-hidden">
                   <img
                     src="../../../../images/home/blog-2.png"
                     alt="blog"
-                    className="rounded-l-xl w-full h-full object-cover group-hover:scale-125 duration-300"
+                    className="rounded-t-xl sm:rounded-l-xl w-full h-full object-cover group-hover:scale-125 duration-300"
                   />
                 </figure>
               </div>
-              <div className="col-span-6 py-6 pe-6">
+              <div className="col-span-12 sm:col-span-6 py-6 pe-6 ps-6 sm:ps-0">
                 <h2 className="text-[#121212] text-2xl font-semibold group-hover:text-primary duration-300">
                   We Protecting Your Digital Assets
                 </h2>
