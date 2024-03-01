@@ -7,7 +7,7 @@ const ButtonLink = ({ title, to, extraClasses }) => {
     <>
       <NavLink
         to={to}
-        className={`bg-primary text-white py-3 px-5 rounded-3xl hover:bg-secondary text-md font-semibold ${extraClasses}`}
+        className={`block bg-primary text-white py-3 px-5 rounded-3xl hover:bg-secondary text-md font-semibold ${extraClasses}`}
       >
         {title}
       </NavLink>
