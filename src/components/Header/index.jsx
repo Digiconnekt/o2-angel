@@ -10,11 +10,10 @@ const Header = () => {
 
   return (
     <>
-      <div className={`w-full sticky top-0 left-0 z-50 bg-white`}>
+      <div className={`w-full sticky top-0 left-0 z-50 bg-white shadow-sm`}>
         <div
           className={`mx-auto max-w-7xl sm:px-6 lg:px-8 md:flex items-center justify-between py-4 md:px-10 px-7 `}
         >
-          {/* logo section */}
           <NavLink
             to="/"
             onClick={() => window.scrollTo(0, 0)}

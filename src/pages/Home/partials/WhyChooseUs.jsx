@@ -1,3 +1,7 @@
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Heading from "../../../components/Typography/Heading";
 import SubHeading from "../../../components/Typography/SubHeading";
 
@@ -16,6 +20,78 @@ const WhyChooseUs = () => {
             }
             extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
           />
+
+          <Swiper
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            slidesPerView={1}
+            spaceBetween={10}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+            }}
+            modules={[Autoplay]}
+            className="mySwiper mt-10"
+          >
+            <SwiperSlide className="bg-white rounded-xl border shadow-sm px-10 py-5">
+              <div className="grid grid-cols-12 items-center gap-y-10 md:gap-10">
+                <div className="col-span-12 md:col-span-6">
+                  <figure>
+                    <img
+                      src="../../../../images/home/why-choose-us.png"
+                      alt="About"
+                      className="w-full"
+                    />
+                  </figure>
+                </div>
+                <div className="col-span-12 md:col-span-6">
+                  <h3 className="text-2xl font-semibold">Profit</h3>
+                  <p className="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laborum voluptatem minima rerum quos unde rem voluptatibus
+                    autem modi explicabo reiciendis amet dicta repellendus fugit
+                    minus optio sequi facere in odit eligendi accusamus
+                    asperiores tenetur, voluptas et quibusdam! Sint, vitae
+                    natus! autem modi explicabo reiciendis amet dicta
+                    repellendus fugit minus optio sequi facere in odit eligendi
+                    accusamus asperiores tenetur, voluptas et quibusdam! Sint,
+                    vitae natus!
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="bg-white rounded-xl border shadow-sm px-10 py-5">
+              <div className="grid grid-cols-12 items-center gap-y-10 md:gap-10">
+                <div className="col-span-12 md:col-span-6">
+                  <figure>
+                    <img
+                      src="../../../../images/home/why-choose-us.png"
+                      alt="About"
+                      className="w-full"
+                    />
+                  </figure>
+                </div>
+                <div className="col-span-12 md:col-span-6">
+                  <h3 className="text-2xl font-semibold">Profit</h3>
+                  <p className="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laborum voluptatem minima rerum quos unde rem voluptatibus
+                    autem modi explicabo reiciendis amet dicta repellendus fugit
+                    minus optio sequi facere in odit eligendi accusamus
+                    asperiores tenetur, voluptas et quibusdam! Sint, vitae
+                    natus! autem modi explicabo reiciendis amet dicta
+                    repellendus fugit minus optio sequi facere in odit eligendi
+                    accusamus asperiores tenetur, voluptas et quibusdam! Sint,
+                    vitae natus!
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </>

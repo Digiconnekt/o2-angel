@@ -51,7 +51,11 @@ const About = () => {
           </div>
           <div className="col-span-12 md:col-span-6">
             <figure>
-              <img src="" alt="About" />
+              <img
+                src="../../../../images/home/about.png"
+                alt="About"
+                className="w-full"
+              />
             </figure>
           </div>
         </div>
