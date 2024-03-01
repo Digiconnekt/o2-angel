@@ -1,10 +1,10 @@
 const bottomBlocksContent = [
   {
-    img: "https://www.pngitem.com/pimgs/m/74-741782_transparent-relationship-icon-png-public-relation-icon-png.png",
+    img: "../../../../images/home/hero-icon-1.png",
     heading: "Become part of our Network",
   },
   {
-    img: "https://www.pngitem.com/pimgs/m/74-741782_transparent-relationship-icon-png-public-relation-icon-png.png",
+    img: "../../../../images/home/hero-icon-2.png",
     heading: "Showcase your business to our Investors",
   },
 ];

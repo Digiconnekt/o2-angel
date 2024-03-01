@@ -12,7 +12,11 @@ const Blogs = () => {
             heading={"Blogs & Articles"}
             extraClasses={"text-[#131333]"}
           />
-          <ButtonLink title={"See More Blogs"} to={"#"} />
+          <ButtonLink
+            title={"See More Blogs"}
+            to={"#"}
+            extraClasses={"hidden sm:block"}
+          />
         </div>
 
         <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
@@ -77,6 +81,12 @@ const Blogs = () => {
             </div>
           </NavLink>
         </div>
+
+        <ButtonLink
+          title={"See More Blogs"}
+          to={"#"}
+          extraClasses={"sm:hidden mt-8 text-center"}
+        />
       </div>
     </>
   );
