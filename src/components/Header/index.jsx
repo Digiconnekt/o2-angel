@@ -34,7 +34,7 @@ const Header = () => {
           </div>
 
           <ul
-            className={`lg:flex lg:items-center bg-white lg:pb-0 pb-12 absolute lg:static lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 pl-9 transition-all duration-500 ease-in ${
+            className={`lg:flex lg:items-center bg-white lg:pb-0 pb-12 absolute lg:static lg:z-auto z-[-1] left-0 w-full lg:w-auto lg:pl-0 pl-9 pe-9 lg:pe-0 transition-all duration-500 ease-in ${
               open ? "top-[85px]" : "top-[-490px]"
             }`}
           >
@@ -50,6 +50,7 @@ const Header = () => {
                       ? "text-primary hover:text-primary duration-300 uppercase pb-2 border-b-2 border-primary"
                       : "text-black hover:text-primary duration-300 uppercase pb-2 border-b-2 border-transparent hover:border-primary"
                   }
+                  onClick={() => setOpen(false)}
                 >
                   {link.name}
                 </NavLink>
