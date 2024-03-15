@@ -14,7 +14,9 @@ const SectionBanner = ({ title, subTitle, bgImg }) => {
         }
       >
         <h1 className={`text-center text-4xl font-bold text-white`}>{title}</h1>
-        <p className={`text-center text-lg mt-4 max-w-lg mx-auto text-white`}>
+        <p
+          className={`text-center text-lg mt-4 max-w-lg mx-auto text-gray-200`}
+        >
           {subTitle}
         </p>
       </div>
