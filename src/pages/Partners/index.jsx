@@ -1,20 +1,26 @@
 import SectionBanner from "../../components/SectionBanner";
-import BlogList from "./partials/BlogList";
+import WhyChooseUs from "../Home/partials/WhyChooseUs";
+import OneLiner from "./partials/OneLiner";
+import PartnerList from "./partials/PartnerList";
 
-const Blogs = () => {
+const index = () => {
   return (
     <>
       <SectionBanner
-        title={"Blogs"}
+        title={"Partners"}
         subTitle={
           "Clarinet accustomed. Would legs of framework officers. We've to morning like a contracting him"
         }
         bgImg={"../../../../images/about/section-banner.jpg"}
       />
 
-      <BlogList />
+      <PartnerList />
+
+      <OneLiner />
+
+      <WhyChooseUs />
     </>
   );
 };
 
-export default Blogs;
+export default index;

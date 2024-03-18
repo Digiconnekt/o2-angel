@@ -1,5 +1,7 @@
 import Heading from "../../../components/Typography/Heading";
 import SubHeading from "../../../components/Typography/SubHeading";
+import { motion } from "framer-motion";
+import { fadeInBottom } from "../../../utils/framerMotionHelper";
 
 const benefitsData = [
   {
@@ -39,7 +41,13 @@ const Benefits = () => {
 
         <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
           {benefitsData.map((benefit, i) => (
-            <div key={i} className="col-span-12 md:col-span-6 lg:col-span-4">
+            <motion.div
+              key={i}
+              className="col-span-12 md:col-span-6 lg:col-span-4"
+              variants={fadeInBottom()}
+              initial="hidden"
+              whileInView="visible"
+            >
               <figure>
                 <img src={benefit.icon} alt="icon" className="mx-auto" />
                 <h3 className="text-lg font-semibold text-center">
@@ -47,7 +55,7 @@ const Benefits = () => {
                 </h3>
                 <p className="text-center mt-1">{benefit.content}</p>
               </figure>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

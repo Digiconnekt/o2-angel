@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { fadeInLeft, fadeInRight } from "../../../utils/framerMotionHelper";
+
 const bottomBlocksContent = [
   {
     img: "../../../../images/home/hero-icon-1.png",
@@ -33,15 +36,18 @@ const Hero = () => {
 
             <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-16">
               {bottomBlocksContent.map((block, i) => (
-                <div
+                <motion.div
                   key={i}
                   className="col-span-12 md:col-span-6 bg-white rounded-md p-5 shadow-lg"
+                  variants={i === 0 ? fadeInLeft() : fadeInRight()}
+                  initial="hidden"
+                  whileInView="visible"
                 >
                   <div className="flex gap-3 items-center">
                     <img src={block.img} alt="icon" className="w-14" />
                     <p className="text-black text-xl">{block.heading}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

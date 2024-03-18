@@ -1,9 +1,17 @@
+import { motion } from "framer-motion";
+import { fadeInBottom } from "../../../utils/framerMotionHelper";
+
 const TwoBlocks = () => {
   return (
     <>
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 pb-36">
         <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
-          <div className="col-span-12 md:col-span-6 relative">
+          <motion.div
+            className="col-span-12 md:col-span-6 relative"
+            variants={fadeInBottom()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <figure>
               <img
                 src="../../../../images/home/startup.png"
@@ -19,8 +27,13 @@ const TwoBlocks = () => {
                 for your.
               </p>
             </div>
-          </div>
-          <div className="col-span-12 md:col-span-6 relative mt-20 md:mt-0">
+          </motion.div>
+          <motion.div
+            className="col-span-12 md:col-span-6 relative mt-20 md:mt-0"
+            variants={fadeInBottom(1.4)}
+            initial="hidden"
+            whileInView="visible"
+          >
             <figure>
               <img
                 src="../../../../images/home/startup.png"
@@ -36,7 +49,7 @@ const TwoBlocks = () => {
                 for your.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

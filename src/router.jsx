@@ -4,12 +4,15 @@ import HeaderFooter from "./layouts/HeaderFooter";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
 
-import Blog from "./pages/Blogs";
+import Blogs from "./pages/Blogs";
 import Blog1 from "./pages/Blogs/Blog1";
 
 import Error404 from "./pages/Errors/Error404";
+import Digiconnekt from "./pages/Partners/Digiconnekt";
+import Buildnetic from "./pages/Partners/Buildnetic";
 
 const router = createBrowserRouter([
   {
@@ -25,8 +28,20 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
+        path: "/partners",
+        element: <Partners />,
+      },
+      {
+        path: "/partners/digiconnekt",
+        element: <Digiconnekt />,
+      },
+      {
+        path: "/partners/buildnetic",
+        element: <Buildnetic />,
+      },
+      {
         path: "/blogs",
-        element: <Blog />,
+        element: <Blogs />,
       },
       {
         path: "/blogs/natural-healing-for-the-body",

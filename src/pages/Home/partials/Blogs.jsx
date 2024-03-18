@@ -3,6 +3,8 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Heading from "../../../components/Typography/Heading";
 import ButtonLink from "../../../components/Buttons/ButtonLink";
 import blogData from "../../../utils/blogData";
+import { motion } from "framer-motion";
+import { fadeInBottom } from "../../../utils/framerMotionHelper";
 
 const Blogs = () => {
   return (
@@ -20,12 +22,17 @@ const Blogs = () => {
           />
         </div>
 
-        <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
+        <motion.div
+          className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10"
+          variants={fadeInBottom()}
+          initial="hidden"
+          whileInView="visible"
+        >
           {blogData.slice(0, 2).map((blog, i) => (
             <NavLink
+              key={i}
               to={blog.href}
               className="col-span-12 md:col-span-6 border rounded-xl shadow-sm group hover:shadow-none duration-300"
-              key={i}
             >
               <div className="grid grid-cols-12 items-center gap-x-5">
                 <div className="col-span-12 sm:col-span-6 h-full">
@@ -49,7 +56,7 @@ const Blogs = () => {
               </div>
             </NavLink>
           ))}
-        </div>
+        </motion.div>
 
         <ButtonLink
           title={"See More Blogs"}
