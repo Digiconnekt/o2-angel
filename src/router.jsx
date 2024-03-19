@@ -13,6 +13,8 @@ import Blogs from "./pages/Blogs";
 import Blog1 from "./pages/Blogs/Blog1";
 
 import Error404 from "./pages/Errors/Error404";
+import Process from "./pages/Investments/Process";
+import Benefits from "./pages/Investments/Benefits";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,14 @@ const router = createBrowserRouter([
       {
         path: "/partners/buildnetic",
         element: <Buildnetic />,
+      },
+      {
+        path: "/investments/process",
+        element: <Process />,
+      },
+      {
+        path: "/investments/benefits",
+        element: <Benefits />,
       },
       {
         path: "/blogs",

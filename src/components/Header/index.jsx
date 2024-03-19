@@ -53,7 +53,7 @@ const Header = () => {
                   <NavLink
                     to={link.link}
                     className={({ isActive }) =>
-                      link.link && isActive
+                      link.link !== "#" && isActive
                         ? "block lg:inline text-primary hover:text-primary duration-300 uppercase pb-2 border-b-2 border-primary"
                         : "block lg:inline text-black hover:text-primary duration-300 uppercase pb-2 border-b-2 border-transparent hover:border-primary"
                     }

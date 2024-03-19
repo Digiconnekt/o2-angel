@@ -8,7 +8,7 @@ import { fadeInLeft, fadeInRight } from "../../../utils/framerMotionHelper";
 const About = () => {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 overflow-x-hidden">
         <Heading
           heading={"About Us"}
           extraClasses={"text-center text-[#131333]"}
@@ -20,7 +20,7 @@ const About = () => {
           extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
         />
 
-        <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10 overflow-x-hidden">
+        <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
           <motion.div
             className="col-span-12 md:col-span-6"
             variants={fadeInLeft()}

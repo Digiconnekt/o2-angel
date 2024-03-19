@@ -3,7 +3,7 @@ const headerLinks = [
   { name: "About", link: "/about" },
   {
     name: "Investments",
-    link: null,
+    link: "#",
     subMenu: [
       { name: "Process", link: "/investments/process" },
       { name: "Benefits", link: "/investments/benefits" },

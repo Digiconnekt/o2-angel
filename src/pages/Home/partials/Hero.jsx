@@ -15,7 +15,7 @@ const bottomBlocksContent = [
 const Hero = () => {
   return (
     <>
-      <div className="relative">
+      <div className="relative overflow-x-hidden">
         <video className="w-full h-[90vh] object-cover" autoPlay loop muted>
           <source src="../../../../images/home/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -34,7 +34,7 @@ const Hero = () => {
               with too.
             </p>
 
-            <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-16 overflow-x-hidden">
+            <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-16">
               {bottomBlocksContent.map((block, i) => (
                 <motion.div
                   key={i}
