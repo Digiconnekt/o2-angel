@@ -20,7 +20,7 @@ const About = () => {
           extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
         />
 
-        <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
+        <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10 overflow-x-hidden">
           <motion.div
             className="col-span-12 md:col-span-6"
             variants={fadeInLeft()}

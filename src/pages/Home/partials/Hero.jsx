@@ -34,7 +34,7 @@ const Hero = () => {
               with too.
             </p>
 
-            <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-16">
+            <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-16 overflow-x-hidden">
               {bottomBlocksContent.map((block, i) => (
                 <motion.div
                   key={i}

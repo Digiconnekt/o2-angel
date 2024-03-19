@@ -5,14 +5,14 @@ import HeaderFooter from "./layouts/HeaderFooter";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Partners from "./pages/Partners";
+import Digiconnekt from "./pages/Partners/Digiconnekt";
+import Buildnetic from "./pages/Partners/Buildnetic";
 import Contact from "./pages/Contact";
 
 import Blogs from "./pages/Blogs";
 import Blog1 from "./pages/Blogs/Blog1";
 
 import Error404 from "./pages/Errors/Error404";
-import Digiconnekt from "./pages/Partners/Digiconnekt";
-import Buildnetic from "./pages/Partners/Buildnetic";
 
 const router = createBrowserRouter([
   {

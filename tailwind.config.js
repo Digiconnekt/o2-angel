@@ -8,6 +8,9 @@ export default {
         secondary: "#7A70E8",
       },
     },
+    fontFamily: {
+      poppins: ["Poppins", "sans-serif"],
+    },
   },
   plugins: [],
 };
