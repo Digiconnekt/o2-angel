@@ -3,22 +3,32 @@ import { motion } from "framer-motion";
 import Heading from "../../../components/Typography/Heading";
 import ButtonLink from "../../../components/Buttons/ButtonLink";
 import SubHeading from "../../../components/Typography/SubHeading";
-import { fadeInLeft, fadeInRight } from "../../../utils/framerMotionHelper";
+import {
+  fadeInBottom,
+  fadeInLeft,
+  fadeInRight,
+} from "../../../utils/framerMotionHelper";
 
 const About = () => {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 overflow-x-hidden">
-        <Heading
-          heading={"About Us"}
-          extraClasses={"text-center text-[#131333]"}
-        />
-        <SubHeading
-          heading={
-            "We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too."
-          }
-          extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
-        />
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24 overflow-x-hidden">
+        <motion.div
+          variants={fadeInBottom()}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <Heading
+            heading={"About Us"}
+            extraClasses={"text-center text-[#131333]"}
+          />
+          <SubHeading
+            heading={
+              "We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too."
+            }
+            extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
+          />
+        </motion.div>
 
         <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
           <motion.div

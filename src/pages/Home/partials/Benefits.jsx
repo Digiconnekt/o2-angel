@@ -27,17 +27,23 @@ const benefitsData = [
 const Benefits = () => {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14">
-        <Heading
-          heading={"Benefits Of Investment"}
-          extraClasses={"text-center text-[#131333]"}
-        />
-        <SubHeading
-          heading={
-            "Clarinet accustomed. Would legs of framework officers. We've to morning like a contracting him"
-          }
-          extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
-        />
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24">
+        <motion.div
+          variants={fadeInBottom()}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <Heading
+            heading={"Benefits Of Investment"}
+            extraClasses={"text-center text-[#131333]"}
+          />
+          <SubHeading
+            heading={
+              "Clarinet accustomed. Would legs of framework officers. We've to morning like a contracting him"
+            }
+            extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
+          />
+        </motion.div>
 
         <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
           {benefitsData.map((benefit, i) => (

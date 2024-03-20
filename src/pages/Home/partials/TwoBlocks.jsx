@@ -4,7 +4,7 @@ import { fadeInBottom } from "../../../utils/framerMotionHelper";
 const TwoBlocks = () => {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 pb-36">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:pt-24 pb-36 lg:pb-44">
         <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
           <motion.div
             className="col-span-12 md:col-span-6 relative"

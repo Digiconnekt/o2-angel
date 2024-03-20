@@ -1,12 +1,19 @@
+import { motion } from "framer-motion";
 import Heading from "../../../components/Typography/Heading";
 import SubHeading from "../../../components/Typography/SubHeading";
+import { fadeInLeft, fadeInRight } from "../../../utils/framerMotionHelper";
 
 const AboutUs = () => {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24 overflow-x-hidden">
         <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
-          <div className="col-span-12 md:col-span-6">
+          <motion.div
+            className="col-span-12 md:col-span-6"
+            variants={fadeInLeft()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <Heading heading={"About Us"} extraClasses={"text-[#131333]"} />
             <SubHeading
               heading={
@@ -14,8 +21,13 @@ const AboutUs = () => {
               }
               extraClasses={"text-gray-500 mt-3 max-w-3xl mx-auto"}
             />
-          </div>
-          <div className="col-span-12 md:col-span-6">
+          </motion.div>
+          <motion.div
+            className="col-span-12 md:col-span-6"
+            variants={fadeInRight()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <figure>
               <img
                 src="../../../../../images/about/about.png"
@@ -23,7 +35,7 @@ const AboutUs = () => {
                 className="w-full"
               />
             </figure>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

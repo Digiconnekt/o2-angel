@@ -1,26 +1,46 @@
+import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { FaPaperPlane } from "react-icons/fa";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
-import { accountLinks, companyLinks } from "../../utils/footerLinks";
+import {
+  companyLinks,
+  investmentsLinks,
+  partnersLinks,
+} from "../../utils/footerLinks";
 import { socialMediaLinks } from "../../utils/socialMediaLinks";
+import {
+  fadeInBottom,
+  fadeInLeft,
+  fadeInRight,
+} from "../../utils/framerMotionHelper";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <>
-      <div className="bg-[#262E38] pt-14">
+      <div className="bg-[#262E38] pt-14 overflow-x-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-12 gap-5 items-center border-b-[1px] pb-10 border-[#717272]">
-            <div className="col-span-12 md:col-span-6">
+            <motion.div
+              className="col-span-12 md:col-span-6"
+              variants={fadeInLeft()}
+              initial="hidden"
+              whileInView="visible"
+            >
               <h3 className="text-2xl font-bold text-white">
                 <span className="text-[#4996F0] block mb-2">
                   Knowledge Is Power.
                 </span>
                 Sign up for our Newsletter.
               </h3>
-            </div>
-            <div className="col-span-12 md:col-span-6">
+            </motion.div>
+            <motion.div
+              className="col-span-12 md:col-span-6"
+              variants={fadeInRight()}
+              initial="hidden"
+              whileInView="visible"
+            >
               <div className="relative md:max-w-md md:ms-auto">
                 <input
                   type="text"
@@ -33,11 +53,16 @@ const Footer = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10 mb-3 md:mt-16 md:mb-16">
-            <div className="col-span-12 md:col-span-6 lg:col-span-4">
+            <motion.div
+              className="col-span-12 md:col-span-6 lg:col-span-3"
+              variants={fadeInBottom()}
+              initial="hidden"
+              whileInView="visible"
+            >
               <NavLink to={"/"}>
                 <img src="../../../images/logo.png" alt="O2 Angle" />
               </NavLink>
@@ -58,9 +83,14 @@ const Footer = () => {
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="col-span-12 md:col-span-6 lg:col-span-4">
+            <motion.div
+              className="col-span-12 md:col-span-6 lg:col-span-3"
+              variants={fadeInBottom()}
+              initial="hidden"
+              whileInView="visible"
+            >
               <p className="text-white text-xl font-semibold">Company</p>
               <ul className="mt-5">
                 {companyLinks.map((link, i) => (
@@ -81,12 +111,17 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
 
-            <div className="col-span-12 md:col-span-6 lg:col-span-4">
-              <p className="text-white text-xl font-semibold">Account</p>
+            <motion.div
+              className="col-span-12 md:col-span-6 lg:col-span-3"
+              variants={fadeInBottom()}
+              initial="hidden"
+              whileInView="visible"
+            >
+              <p className="text-white text-xl font-semibold">Investments</p>
               <ul className="mt-5">
-                {accountLinks.map((link, i) => (
+                {investmentsLinks.map((link, i) => (
                   <li
                     key={i}
                     className={`${
@@ -104,7 +139,35 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
+
+            <motion.div
+              className="col-span-12 md:col-span-6 lg:col-span-3"
+              variants={fadeInBottom()}
+              initial="hidden"
+              whileInView="visible"
+            >
+              <p className="text-white text-xl font-semibold">Partners</p>
+              <ul className="mt-5">
+                {partnersLinks.map((link, i) => (
+                  <li
+                    key={i}
+                    className={`${
+                      i !== companyLinks.length - 1 &&
+                      "border-b pb-3 mb-3 border-[#717272]"
+                    }`}
+                  >
+                    <NavLink
+                      to={link.to}
+                      className="flex items-center gap-2 text-gray-300 hover:text-primary duration-300"
+                    >
+                      <MdOutlineKeyboardDoubleArrowRight />
+                      {link.title}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </div>
 
           <p className="text-gray-300 text-center md:text-end">
@@ -125,13 +188,23 @@ const Footer = () => {
 
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-12 gap-y-5 md:gap-10 py-6">
-            <div className="col-span-12 md:col-span-8 text-center md:text-left">
+            <motion.div
+              className="col-span-12 md:col-span-8 text-center md:text-left"
+              variants={fadeInLeft()}
+              initial="hidden"
+              whileInView="visible"
+            >
               <p className="text-gray-300 text-sm">
                 Copyright &copy; {currentYear}. All Rights Reserved By O2 Angels
                 Network.
               </p>
-            </div>
-            <div className="col-span-12 md:col-span-4">
+            </motion.div>
+            <motion.div
+              className="col-span-12 md:col-span-4"
+              variants={fadeInRight()}
+              initial="hidden"
+              whileInView="visible"
+            >
               <ul className="flex items-center justify-center md:justify-end gap-4">
                 {socialMediaLinks.map((link, i) => (
                   <li key={i}>
@@ -144,7 +217,7 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

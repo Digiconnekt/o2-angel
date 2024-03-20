@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import Heading from "../../../components/Typography/Heading";
+import { fadeInBottom } from "../../../utils/framerMotionHelper";
 
 const ourTeamData = [
   {
@@ -42,21 +44,30 @@ const ourTeamData = [
 const OurTeam = () => {
   return (
     <>
-      <div className="bg-gradient-to-r from-[#E1E2FF00] to-[#E9E9F9] py-14">
+      <div className="bg-gradient-to-r from-[#E1E2FF00] to-[#E9E9F9] py-14 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <span className="block text-center uppercase text-[#4C6FFF] font-semibold">
-            Our Team
-          </span>
-          <Heading
-            heading={"Meet our awesome and professional team"}
-            extraClasses={"text-[#131333] text-center"}
-          />
+          <motion.div
+            variants={fadeInBottom()}
+            initial="hidden"
+            whileInView="visible"
+          >
+            <span className="block text-center uppercase text-[#4C6FFF] font-semibold">
+              Our Team
+            </span>
+            <Heading
+              heading={"Meet our awesome and professional team"}
+              extraClasses={"text-[#131333] text-center"}
+            />
+          </motion.div>
 
           <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
             {ourTeamData.map((data, i) => (
-              <div
+              <motion.div
                 key={i}
                 className="col-span-12 md:col-span-6 bg-white shadow-sm border p-7 rounded-2xl"
+                variants={fadeInBottom()}
+                initial="hidden"
+                whileInView="visible"
               >
                 <div className="flex gap-2 flex-col lg:flex-row">
                   <figure className="me-2">
@@ -71,7 +82,7 @@ const OurTeam = () => {
                     <p className="mt-1 text-gray-500">{data.content}</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

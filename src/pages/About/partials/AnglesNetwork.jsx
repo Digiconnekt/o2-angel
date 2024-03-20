@@ -1,11 +1,18 @@
+import { motion } from "framer-motion";
 import Heading from "../../../components/Typography/Heading";
+import { fadeInLeft, fadeInRight } from "../../../utils/framerMotionHelper";
 
 const AnglesNetwork = () => {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24 overflow-x-hidden">
         <div className="grid grid-cols-12 items-start gap-y-10 md:gap-10 mt-10">
-          <div className="col-span-12 md:col-span-6 lg:col-span-8">
+          <motion.div
+            className="col-span-12 md:col-span-6 lg:col-span-8"
+            variants={fadeInLeft()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <Heading
               heading={
                 "O2 Angels Network has been founded by Rajesh Ranjan and supported by his investment banking friends."
@@ -50,8 +57,13 @@ const AnglesNetwork = () => {
                 </p>
               </div>
             </div>
-          </div>
-          <div className="col-span-12 md:col-span-6 lg:col-span-4 border shadow-sm p-5 rounded-xl">
+          </motion.div>
+          <motion.div
+            className="col-span-12 md:col-span-6 lg:col-span-4 border shadow-sm p-5 rounded-xl"
+            variants={fadeInRight()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <figure className="">
               <img
                 src="https://www.mnp.ca/-/media/foundation/integrations/personnel/2020/12/16/13/57/personnel-image-4483.jpg?h=800&w=600&hash=9D5E5FCBEE00EB562DCD8AC8FDA8433D"
@@ -63,7 +75,7 @@ const AnglesNetwork = () => {
               Rajesh Ranjan
             </h3>
             <p className="text-sm text-center mt-1 text-gray-400">FOUNDER</p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

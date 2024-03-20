@@ -24,7 +24,7 @@ const counterData = [
 const Counter = () => {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 border-t border-[#dcdcdc]">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24 border-t border-[#dcdcdc]">
         <div className="grid grid-cols-12 gap-y-10 md:gap-10">
           {counterData.map((counter, i) => (
             <div key={i} className="col-span-6 lg:col-span-3">

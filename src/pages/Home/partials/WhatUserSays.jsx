@@ -1,10 +1,12 @@
 import "swiper/css";
+import { motion } from "framer-motion";
 import "swiper/css/pagination";
 import { FaStar } from "react-icons/fa";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Heading from "../../../components/Typography/Heading";
 import SubHeading from "../../../components/Typography/SubHeading";
+import { fadeInBottom } from "../../../utils/framerMotionHelper";
 
 const whatUserSaysData = [
   {
@@ -47,18 +49,24 @@ const whatUserSaysData = [
 const WhatUserSays = () => {
   return (
     <>
-      <div className="bg-gradient-to-r from-[#C854C8] to-[#4675CA] py-14">
+      <div className="bg-gradient-to-r from-[#C854C8] to-[#4675CA] py-14 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <Heading
-            heading={"What User Says"}
-            extraClasses={"text-center text-white"}
-          />
-          <SubHeading
-            heading={
-              "We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too."
-            }
-            extraClasses={"text-center text-gray-200 mt-3 max-w-3xl mx-auto"}
-          />
+          <motion.div
+            variants={fadeInBottom()}
+            initial="hidden"
+            whileInView="visible"
+          >
+            <Heading
+              heading={"What User Says"}
+              extraClasses={"text-center text-white"}
+            />
+            <SubHeading
+              heading={
+                "We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too."
+              }
+              extraClasses={"text-center text-gray-200 mt-3 max-w-3xl mx-auto"}
+            />
+          </motion.div>
 
           <Swiper
             autoplay={{

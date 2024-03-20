@@ -8,12 +8,8 @@ export const companyLinks = [
     to: "/about",
   },
   {
-    title: "Services",
-    to: "/services",
-  },
-  {
-    title: "Blog",
-    to: "/blog",
+    title: "Blogs",
+    to: "/blogs",
   },
   {
     title: "Contact",
@@ -21,17 +17,24 @@ export const companyLinks = [
   },
 ];
 
-export const accountLinks = [
+export const investmentsLinks = [
   {
-    title: "Privacy & Policy",
-    to: "#",
+    title: "Process",
+    to: "/investments/process",
   },
   {
-    title: "Support",
-    to: "#",
+    title: "Benefits",
+    to: "/investments/benefits",
+  },
+];
+
+export const partnersLinks = [
+  {
+    title: "Digiconnekt",
+    to: "/partners/digiconnekt",
   },
   {
-    title: "Carrers",
-    to: "#",
+    title: "Buildnetic",
+    to: "/partners/buildnetic",
   },
 ];

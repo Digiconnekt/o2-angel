@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
-import { fadeInLeft, fadeInRight } from "../../../utils/framerMotionHelper";
+import {
+  fadeInBottom,
+  fadeInLeft,
+  fadeInRight,
+} from "../../../utils/framerMotionHelper";
 
 const bottomBlocksContent = [
   {
@@ -25,14 +29,24 @@ const Hero = () => {
 
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="px-6">
-            <h1 className="text-5xl lg:text-6xl text-white font-bold text-center">
+            <motion.h1
+              className="text-5xl lg:text-6xl text-white font-bold text-center"
+              variants={fadeInBottom()}
+              initial="hidden"
+              whileInView="visible"
+            >
               Welcome to the Startup World !
-            </h1>
-            <p className="mt-5 max-w-3xl mx-auto text-gray-200 text-2xl text-center">
+            </motion.h1>
+            <motion.p
+              className="mt-5 max-w-3xl mx-auto text-gray-200 text-2xl text-center"
+              variants={fadeInBottom()}
+              initial="hidden"
+              whileInView="visible"
+            >
               We use the latest technologies and tools in order to create a
               better code that not only works great, but it is easy easy to work
               with too.
-            </p>
+            </motion.p>
 
             <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-16">
               {bottomBlocksContent.map((block, i) => (

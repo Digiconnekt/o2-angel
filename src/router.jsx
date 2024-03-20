@@ -30,6 +30,14 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
+        path: "/investments/process",
+        element: <Process />,
+      },
+      {
+        path: "/investments/benefits",
+        element: <Benefits />,
+      },
+      {
         path: "/partners",
         element: <Partners />,
       },
@@ -40,14 +48,6 @@ const router = createBrowserRouter([
       {
         path: "/partners/buildnetic",
         element: <Buildnetic />,
-      },
-      {
-        path: "/investments/process",
-        element: <Process />,
-      },
-      {
-        path: "/investments/benefits",
-        element: <Benefits />,
       },
       {
         path: "/blogs",

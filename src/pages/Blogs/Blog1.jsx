@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import SectionBanner from "../../components/SectionBanner";
+import { fadeInBottom } from "../../utils/framerMotionHelper";
 
 const Blog1 = () => {
   return (
@@ -9,14 +11,18 @@ const Blog1 = () => {
         bgImg={"../../../../images/about/section-banner.jpg"}
       />
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14">
-        <figure>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24">
+        <motion.figure
+          variants={fadeInBottom()}
+          initial="hidden"
+          whileInView="visible"
+        >
           <img
             src="../../../../images/home/startup.png"
             alt="blog"
             className="w-full"
           />
-        </figure>
+        </motion.figure>
 
         <p className="mt-10">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam saepe,

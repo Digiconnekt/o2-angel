@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Button from "../../../components/Buttons/Button";
 import Input from "../../../components/Inputs/Input";
 import TextArea from "../../../components/Inputs/TextArea";
@@ -8,24 +9,40 @@ import { FaPaperPlane } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import {
+  fadeInBottom,
+  fadeInLeft,
+  fadeInRight,
+} from "../../../utils/framerMotionHelper";
 
 const GetInTouch = () => {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14">
-        <Heading
-          heading={"Get In Touch"}
-          extraClasses={"text-[#131333] text-center"}
-        />
-        <SubHeading
-          heading={
-            "We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too."
-          }
-          extraClasses={"text-gray-500 mt-3 max-w-3xl mx-auto text-center"}
-        />
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24">
+        <motion.div
+          variants={fadeInBottom()}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <Heading
+            heading={"Get In Touch"}
+            extraClasses={"text-[#131333] text-center"}
+          />
+          <SubHeading
+            heading={
+              "We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too."
+            }
+            extraClasses={"text-gray-500 mt-3 max-w-3xl mx-auto text-center"}
+          />
+        </motion.div>
 
         <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-16">
-          <div className="col-span-12 md:col-span-6 lg:col-span-8">
+          <motion.div
+            className="col-span-12 md:col-span-6 lg:col-span-8"
+            variants={fadeInLeft()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <form className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
                 <Input
@@ -75,8 +92,13 @@ const GetInTouch = () => {
                 />
               </div>
             </form>
-          </div>
-          <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-gradient-to-bl from-[#C854C8] to-[#4675CA] rounded-2xl p-10">
+          </motion.div>
+          <motion.div
+            className="col-span-12 md:col-span-6 lg:col-span-4 bg-gradient-to-bl from-[#C854C8] to-[#4675CA] rounded-2xl p-10"
+            variants={fadeInRight()}
+            initial="hidden"
+            whileInView="visible"
+          >
             <div className="h-full flex flex-col justify-center">
               <h2 className="text-white text-2xl font-semibold">
                 Contact Information
@@ -94,7 +116,7 @@ const GetInTouch = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

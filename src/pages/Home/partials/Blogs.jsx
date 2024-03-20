@@ -4,22 +4,38 @@ import Heading from "../../../components/Typography/Heading";
 import ButtonLink from "../../../components/Buttons/ButtonLink";
 import blogData from "../../../utils/blogData";
 import { motion } from "framer-motion";
-import { fadeInBottom } from "../../../utils/framerMotionHelper";
+import {
+  fadeInBottom,
+  fadeInLeft,
+  fadeInRight,
+} from "../../../utils/framerMotionHelper";
 
 const Blogs = () => {
   return (
     <>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24  overflow-x-hidden">
         <div className="flex items-center justify-between">
-          <Heading
-            heading={"Blogs & Articles"}
-            extraClasses={"text-[#131333]"}
-          />
-          <ButtonLink
-            title={"See More Blogs"}
-            to={"/blogs"}
-            extraClasses={"hidden sm:block"}
-          />
+          <motion.div
+            variants={fadeInLeft()}
+            initial="hidden"
+            whileInView="visible"
+          >
+            <Heading
+              heading={"Blogs & Articles"}
+              extraClasses={"text-[#131333]"}
+            />
+          </motion.div>
+          <motion.div
+            variants={fadeInRight()}
+            initial="hidden"
+            whileInView="visible"
+          >
+            <ButtonLink
+              title={"See More Blogs"}
+              to={"/blogs"}
+              extraClasses={"hidden sm:block"}
+            />
+          </motion.div>
         </div>
 
         <motion.div
