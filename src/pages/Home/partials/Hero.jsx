@@ -4,6 +4,9 @@ import {
   fadeInLeft,
   fadeInRight,
 } from "../../../utils/framerMotionHelper";
+import BecomePartOfNetwork from "../../../components/Modals/BecomePartOfNetwork";
+import { useState } from "react";
+import ShowcaseYourBusiness from "../../../components/Modals/ShowcaseYourBusiness";
 
 const bottomBlocksContent = [
   {
@@ -17,10 +20,28 @@ const bottomBlocksContent = [
 ];
 
 const Hero = () => {
+  const [becomePartOfNetworkShowModal, setBecomePartOfNetworkShowModal] =
+    useState(false);
+  const [showcaseBusinessShowModal, setShowcaseBusinessShowModal] =
+    useState(false);
+
+  const modalHandler = (id) => {
+    if (id === 0) {
+      setBecomePartOfNetworkShowModal(true);
+    } else if (id === 1) {
+      setShowcaseBusinessShowModal(true);
+    }
+  };
+
   return (
     <>
-      <div className="relative overflow-x-hidden">
-        <video className="w-full h-[90vh] object-cover" autoPlay loop muted>
+      <div className="relative overflow-hidden">
+        <video
+          className="w-full h-[800px] md:h-[90vh] object-cover"
+          autoPlay
+          loop
+          muted
+        >
           <source src="../../../../images/home/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -52,18 +73,30 @@ const Hero = () => {
               {bottomBlocksContent.map((block, i) => (
                 <motion.div
                   key={i}
-                  className="col-span-12 md:col-span-6 bg-white rounded-md p-5 shadow-lg"
+                  className="col-span-12 md:col-span-6 bg-white rounded-md p-5 shadow-lg group cursor-pointer hover:bg-[#c9dcff]"
                   variants={i === 0 ? fadeInLeft() : fadeInRight()}
                   initial="hidden"
                   whileInView="visible"
+                  onClick={() => modalHandler(i)}
                 >
                   <div className="flex gap-3 items-center">
                     <img src={block.img} alt="icon" className="w-14" />
-                    <p className="text-black text-xl">{block.heading}</p>
+                    <p className="text-black text-xl group-hover:underline transition-all duration-300">
+                      {block.heading}
+                    </p>
                   </div>
                 </motion.div>
               ))}
             </div>
+
+            <BecomePartOfNetwork
+              isOpen={becomePartOfNetworkShowModal}
+              setIsOpen={setBecomePartOfNetworkShowModal}
+            />
+            <ShowcaseYourBusiness
+              isOpen={showcaseBusinessShowModal}
+              setIsOpen={setShowcaseBusinessShowModal}
+            />
           </div>
         </div>
       </div>
