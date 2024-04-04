@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import { FaPaperPlane } from "react-icons/fa";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import {
   companyLinks,
@@ -21,42 +20,7 @@ const Footer = () => {
     <>
       <div className="bg-[#262E38] pt-14 overflow-x-hidden">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-12 gap-5 items-center border-b-[1px] pb-10 border-[#717272]">
-            <motion.div
-              className="col-span-12 md:col-span-6"
-              variants={fadeInLeft()}
-              initial="hidden"
-              whileInView="visible"
-            >
-              <h3 className="text-2xl font-bold text-white">
-                <span className="text-[#4996F0] block mb-2">
-                  Knowledge Is Power.
-                </span>
-                Sign up for our Newsletter.
-              </h3>
-            </motion.div>
-            <motion.div
-              className="col-span-12 md:col-span-6"
-              variants={fadeInRight()}
-              initial="hidden"
-              whileInView="visible"
-            >
-              <div className="relative md:max-w-md md:ms-auto">
-                <input
-                  type="text"
-                  placeholder="Enter Your Email"
-                  className="w-full py-3 rounded-3xl ps-4 pe-32 outline-none"
-                />
-                <div className="absolute right-0 top-0 bottom-0">
-                  <button className=" bg-primary text-white py-3 px-5 rounded-3xl hover:bg-secondary text-md font-semibold">
-                    Subscribe
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10 mb-3 md:mt-16 md:mb-16">
+          <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10 mb-3 md:mb-16">
             <motion.div
               className="col-span-12 md:col-span-6 lg:col-span-3"
               variants={fadeInBottom()}
@@ -71,18 +35,6 @@ const Footer = () => {
                 Reprehenderit, iusto. Accusantium rem numquam obcaecati officia
                 iusto ea repellendus nulla sit.
               </p>
-              <div className="relative mt-5">
-                <input
-                  type="text"
-                  placeholder="Enter Your Email"
-                  className="w-full h-12 rounded-3xl ps-4 pe-28 outline-none bg-gray-600 text-gray-300"
-                />
-                <div className="absolute right-1 bottom-1">
-                  <button className="bg-gradient-to-tr from-[#8E2DE2] to-[#4A00E0] text-white w-10 h-10 flex items-center justify-center rounded-full hover:from-[#4A00E0] hover:to-[#8E2DE2] text-md font-semibold">
-                    <FaPaperPlane />
-                  </button>
-                </div>
-              </div>
             </motion.div>
 
             <motion.div

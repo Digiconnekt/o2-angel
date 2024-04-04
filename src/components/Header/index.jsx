@@ -2,7 +2,6 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RiMenu3Fill } from "react-icons/ri";
 import { RxCross1 } from "react-icons/rx";
-import ButtonLink from "../Buttons/ButtonLink";
 import headerLinks from "../../utils/headerLinks";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
@@ -114,9 +113,6 @@ const Header = () => {
                 </li>
               )
             )}
-            <li className="lg:ms-5 mt-3 lg:mt-0">
-              <ButtonLink title={"Sign Up / Sign In"} to={"#"} />
-            </li>
           </ul>
         </div>
       </div>
