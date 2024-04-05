@@ -4,7 +4,6 @@ import Input from "../../../components/Inputs/Input";
 import TextArea from "../../../components/Inputs/TextArea";
 import Heading from "../../../components/Typography/Heading";
 import SubHeading from "../../../components/Typography/SubHeading";
-
 import { FaPaperPlane } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -14,8 +13,46 @@ import {
   fadeInLeft,
   fadeInRight,
 } from "../../../utils/framerMotionHelper";
+import useContact from "../../../apis/contact";
+import { useEffect, useState } from "react";
 
 const GetInTouch = () => {
+  const { contactReq, data, error, isLoading } = useContact();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const onChangeHandler = (field, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    contactReq(formData);
+
+    console.log("formData", formData);
+  };
+
+  useEffect(() => {
+    data &&
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+  }, [data]);
+
   return (
     <>
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24">
@@ -50,6 +87,11 @@ const GetInTouch = () => {
                   type={"text"}
                   label={"Name"}
                   placeholder={"Enter your Name"}
+                  value={formData.name}
+                  onChange={(value) => onChangeHandler("name", value)}
+                  error={
+                    error?.errors?.name ? error?.errors?.name[0] : undefined
+                  }
                 />
               </div>
               <div>
@@ -58,6 +100,11 @@ const GetInTouch = () => {
                   type={"email"}
                   label={"Email"}
                   placeholder={"Enter your Email"}
+                  value={formData.email}
+                  onChange={(value) => onChangeHandler("email", value)}
+                  error={
+                    error?.errors?.email ? error?.errors?.email[0] : undefined
+                  }
                 />
               </div>
               <div className="sm:col-span-2">
@@ -66,6 +113,11 @@ const GetInTouch = () => {
                   type={"text"}
                   label={"Phone"}
                   placeholder={"Enter your Phone Number"}
+                  value={formData.phone}
+                  onChange={(value) => onChangeHandler("phone", value)}
+                  error={
+                    error?.errors?.phone ? error?.errors?.phone[0] : undefined
+                  }
                 />
               </div>
               <div className="sm:col-span-2">
@@ -74,6 +126,13 @@ const GetInTouch = () => {
                   type={"text"}
                   label={"Subject"}
                   placeholder={"Write your Subject"}
+                  value={formData.subject}
+                  onChange={(value) => onChangeHandler("subject", value)}
+                  error={
+                    error?.errors?.subject
+                      ? error?.errors?.subject[0]
+                      : undefined
+                  }
                 />
               </div>
               <div className="sm:col-span-2">
@@ -81,14 +140,23 @@ const GetInTouch = () => {
                   id={"message"}
                   label={"Message"}
                   placeholder={"Write your message here..."}
+                  value={formData.message}
+                  onChange={(value) => onChangeHandler("message", value)}
+                  error={
+                    error?.errors?.message
+                      ? error?.errors?.message[0]
+                      : undefined
+                  }
                 />
               </div>
               <div className="sm:col-span-2">
                 <Button
-                  type={"submit"}
+                  type={"button"}
                   title={"Submit"}
                   Icon={FaPaperPlane}
                   extraClasses={"w-full"}
+                  onClick={submitHandler}
+                  isLoading={isLoading}
                 />
               </div>
             </form>
