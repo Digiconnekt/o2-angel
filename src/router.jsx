@@ -15,6 +15,7 @@ import Blog1 from "./pages/Blogs/Blog1";
 import Error404 from "./pages/Errors/Error404";
 import Process from "./pages/Investments/Process";
 import Benefits from "./pages/Investments/Benefits";
+import Blog2 from "./pages/Blogs/Blog2";
 
 const router = createBrowserRouter([
   {
@@ -54,8 +55,12 @@ const router = createBrowserRouter([
         element: <Blogs />,
       },
       {
-        path: "/blogs/natural-healing-for-the-body",
+        path: "/blogs/navigating-the-investment-landscape-a-beginners-guide",
         element: <Blog1 />,
+      },
+      {
+        path: "/blogs/exploring-alternative-investments-diversifying-your-portfolio-for-growth",
+        element: <Blog2 />,
       },
       {
         path: "/contact",

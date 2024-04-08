@@ -81,7 +81,7 @@ const BenefitsOfInvestments = () => {
           />
           <SubHeading
             heading={
-              "Clarinet accustomed. Would legs of framework officers. We've to morning like a contracting him"
+              "Paving the Path to Wealth Mastery; Unrivaled Returns, Exponential Expansion"
             }
             extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
           />
