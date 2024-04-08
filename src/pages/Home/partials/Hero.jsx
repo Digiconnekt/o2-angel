@@ -56,18 +56,8 @@ const Hero = () => {
               initial="hidden"
               whileInView="visible"
             >
-              Welcome to the Startup World !
+              Welcome to the Startup World <br /> Empowering the Visionaries
             </motion.h1>
-            <motion.p
-              className="mt-5 max-w-3xl mx-auto text-gray-200 text-2xl text-center"
-              variants={fadeInBottom()}
-              initial="hidden"
-              whileInView="visible"
-            >
-              We use the latest technologies and tools in order to create a
-              better code that not only works great, but it is easy easy to work
-              with too.
-            </motion.p>
 
             <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-16">
               {bottomBlocksContent.map((block, i) => (

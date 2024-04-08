@@ -1,23 +1,48 @@
 import Hero from "./partials/Hero";
 import Blogs from "./partials/Blogs";
 import About from "./partials/About";
-import Counter from "./partials/Counter";
-import Benefits from "./partials/Benefits";
+import Counter from "../../components/Counter/Counter";
+import BenefitsOfInvestments from "./partials/BenefitsOfInvestments";
 import OneLiner from "./partials/OneLiner";
-import TwoBlocks from "./partials/TwoBlocks";
+import Startups from "./partials/Startups";
 import WhyChooseUs from "./partials/WhyChooseUs";
 import WhatUserSays from "./partials/WhatUserSays";
+import Investors from "./partials/Investors";
+
+const counterData = [
+  {
+    icon: "../../../../images/home/counter-icon.png",
+    heading: "Expert Team",
+    number: 43,
+  },
+  {
+    icon: "../../../../images/home/counter-icon.png",
+    heading: "Expert Team",
+    number: 25,
+  },
+  {
+    icon: "../../../../images/home/counter-icon.png",
+    heading: "Expert Team",
+    number: 194,
+  },
+  {
+    icon: "../../../../images/home/counter-icon.png",
+    heading: "Expert Team",
+    number: 148,
+  },
+];
 
 const Home = () => {
   return (
     <>
       <Hero />
       <About />
-      <Counter />
+      <Counter data={counterData} />
       <OneLiner />
-      <TwoBlocks />
+      <Startups />
+      <Investors />
       <WhyChooseUs />
-      <Benefits />
+      <BenefitsOfInvestments />
       <WhatUserSays />
       <Blogs />
     </>

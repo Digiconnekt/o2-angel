@@ -1,31 +1,127 @@
+/* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import SectionBanner from "../../components/SectionBanner";
 import Heading from "../../components/Typography/Heading";
-import SubHeading from "../../components/Typography/SubHeading";
 import {
   fadeInBottom,
   fadeInLeft,
   fadeInRight,
 } from "../../utils/framerMotionHelper";
+import Counter from "../../components/Counter/Counter";
+import ButtonLink from "../../components/Buttons/ButtonLink";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-const benefitsData = [
+const whyChooseUsData = [
   {
     icon: "../../../../images/home/benefits-icon.png",
-    title: "Benefit 1",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et eiusmod tempor incididunt ut labore et",
+      "We leverage secure & scalable solutions with the integration of technologies to develop solutions to translate your visionary ideas into reality.",
   },
   {
     icon: "../../../../images/home/benefits-icon.png",
-    title: "Benefit 2",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et eiusmod tempor incididunt ut labore et",
+      "We aim to deliver marketing-led business solutions that define bold ambitions.",
   },
   {
     icon: "../../../../images/home/benefits-icon.png",
-    title: "Benefit 3",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et eiusmod tempor incididunt ut labore et",
+      "We are hell-bent on creating the best digital world by creating better knowledge on insights, market intelligence, and data analysis.",
+  },
+  {
+    icon: "../../../../images/home/benefits-icon.png",
+    content:
+      "Our experts help organizations nurture strong and deliver effective and outstanding customer experiences.",
+  },
+  {
+    icon: "../../../../images/home/benefits-icon.png",
+    content:
+      "We help you build business efficiency, optimize digital processes and accelerate growth in all spheres.",
+  },
+];
+
+const counterData = [
+  {
+    icon: "../../../../images/home/counter-icon.png",
+    heading: "Years In Business",
+    number: 10,
+  },
+  {
+    icon: "../../../../images/home/counter-icon.png",
+    heading: "Dedicated Developers",
+    number: 100,
+  },
+  {
+    icon: "../../../../images/home/counter-icon.png",
+    heading: "Global Clients",
+    number: 500,
+  },
+  {
+    icon: "../../../../images/home/counter-icon.png",
+    heading: "Outcomes Achieved",
+    number: 3000,
+  },
+];
+
+const clientsData = [
+  {
+    img: "acuver.png",
+  },
+  {
+    img: "air-tour-australia.png",
+  },
+  {
+    img: "car-dekho.png",
+  },
+  {
+    img: "ddf.png",
+  },
+  {
+    img: "design-pax.png",
+  },
+  {
+    img: "dream-webies.png",
+  },
+  {
+    img: "ek-katha.svg",
+  },
+  {
+    img: "epam.png",
+  },
+  {
+    img: "healbox.png",
+  },
+  {
+    img: "life-trail.png",
+  },
+  {
+    img: "listed.png",
+  },
+  {
+    img: "m-and-s.png",
+  },
+  {
+    img: "marsh-mc-lennan.png",
+  },
+  {
+    img: "metamore.png",
+  },
+  {
+    img: "nostra.svg",
+  },
+  {
+    img: "oneretailworld.png",
+  },
+  {
+    img: "repl.png",
+  },
+  {
+    img: "startup-buddy.png",
+  },
+  {
+    img: "the-coding-trail.png",
   },
 ];
 
@@ -34,32 +130,84 @@ const Buildnetic = () => {
     <>
       <SectionBanner
         title={"Buildnetic"}
-        subTitle={
-          "Clarinet accustomed. Would legs of framework officers. We've to morning like a contracting him"
-        }
+        subTitle={"IT Outsourcing and Support Services For Your Business"}
         bgImg={"../../../../images/about/section-banner.jpg"}
       />
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24 overflow-x-hidden">
+        <div className="grid grid-cols-12 items-center gap-y-10 md:gap-10">
+          <motion.div
+            className="col-span-12 md:col-span-6 lg:col-span-4"
+            variants={fadeInLeft()}
+            initial="hidden"
+            whileInView="visible"
+          >
+            <figure className="max-w-52 h-52 mx-auto">
+              <img
+                src="../../../../images/partners/buildnetic/buildnetic-logo.png"
+                alt="Buildnetic"
+                className="w-full h-full object-contain"
+              />
+            </figure>
+          </motion.div>
+          <motion.div
+            className="col-span-12 md:col-span-6 lg:col-span-8"
+            variants={fadeInRight()}
+            initial="hidden"
+            whileInView="visible"
+          >
+            <h3 className="text-4xl font-semibold text-black mb-5">
+              About <span className="text-[#C854C8]">Buildnetic</span>
+            </h3>
+            <p className="text-gray-500">
+              Buildnetic serves as a powerful tool for your digitalization,
+              changing your visualization into genuine business innovation and
+              increasing the rate at which customers convert into paying
+              customers. We are prepared to assist you with our expertise!
+            </p>
+            <p className="text-gray-500 mt-3">
+              Our expertise combines brand creation, analytics, and consulting
+              expertise to help you effectively identify client needs and create
+              reliable systems and user-friendly solutions. We provide a full
+              range of services, including UI design, automation, web solutions,
+              artificial intelligence, machine learning, and everything in
+              between.
+            </p>
+            <p className="text-gray-500 mt-3">
+              We come together to support you as you transform your bold
+              concepts into user-centered solutions. By utilizing current
+              strategies and incorporating new technologies to promote digital
+              excellence, we seek to broaden your brand's recognition across
+              dimensions, boost client engagement, and maximize ROI.
+            </p>
+            <ButtonLink
+              to={"https://buildnetic.com"}
+              title={"Discover More"}
+              extraClasses={"inline-block mt-8"}
+              newTab={true}
+            />
+          </motion.div>
+        </div>
+      </div>
+
+      <div className="bg-[#262E38] overflow-x-hidden">
+        <Counter data={counterData} numColor={"text-white"} />
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24 overflow-hidden">
         <motion.div
           variants={fadeInBottom()}
           initial="hidden"
           whileInView="visible"
         >
           <Heading
-            heading={"Benefits Of Investment"}
+            heading={"Why Choose Us"}
             extraClasses={"text-center text-[#131333]"}
-          />
-          <SubHeading
-            heading={
-              "Clarinet accustomed. Would legs of framework officers. We've to morning like a contracting him"
-            }
-            extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
           />
         </motion.div>
 
         <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
-          {benefitsData.map((benefit, i) => (
+          {whyChooseUsData.map((whyUs, i) => (
             <motion.div
               key={i}
               className="col-span-12 md:col-span-6 lg:col-span-4"
@@ -68,151 +216,73 @@ const Buildnetic = () => {
               whileInView="visible"
             >
               <figure>
-                <img src={benefit.icon} alt="icon" className="mx-auto" />
-                <h3 className="text-lg font-semibold text-center">
-                  {benefit.title}
-                </h3>
-                <p className="text-center mt-1">{benefit.content}</p>
+                <img src={whyUs.icon} alt="icon" className="mx-auto" />
+                <p className="text-center mt-1">{whyUs.content}</p>
               </figure>
             </motion.div>
           ))}
         </div>
       </div>
 
-      <div className="bg-[#262E38]">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24">
-          <div className="grid grid-cols-12 gap-y-10 md:gap-10 items-center">
-            <motion.div
-              className="col-span-12 md:col-span-6"
-              variants={fadeInLeft()}
-              initial="hidden"
-              whileInView="visible"
-            >
-              <figure>
-                <img src="../../../../images/blogs/blog.png" alt="image" />
-              </figure>
-            </motion.div>
-            <motion.div
-              className="col-span-12 md:col-span-6"
-              variants={fadeInRight()}
-              initial="hidden"
-              whileInView="visible"
-            >
-              <h3 className="text-4xl font-semibold text-white mb-5">
-                About <span className="text-[#C854C8]">Digiconnekt</span>
-              </h3>
-              <p className="text-white">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Laborum dicta, architecto consequatur rem ad in delectus, eaque
-                asperiores earum quaerat non. Nemo fugiat delectus labore
-                explicabo eligendi incidunt saepe voluptate error ut blanditiis
-                facilis deleniti fuga, sequi cum inventore at non architecto
-                possimus, enim perspiciatis maiores quos? Aperiam, nulla
-                recusandae.
-              </p>
-              <p className="text-white mt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veritatis dolores assumenda ea, at sint itaque dignissimos
-                quisquam, nisi dolorum voluptas enim perferendis ipsam?
-                Excepturi, repudiandae doloribus ut et eos aut.
-              </p>
-            </motion.div>
-          </div>
+      <div className="bg-gradient-to-r from-[#C854C8] to-[#4675CA] py-14">
+        <div className="mx-auto text-center max-w-7xl px-6 lg:px-8">
+          <h2 className="text-3xl md:text-5xl text-white font-bold text-center leading-[40px] md:leading-[70px]">
+            <span className="text-[#FEC713]">IT Outsourcing</span> and{" "}
+            <span className="text-[#FEC713]">Support Services</span> For Your
+            Business
+          </h2>
+          <ButtonLink
+            to={"https://buildnetic.com"}
+            title={"Discover More"}
+            extraClasses={"inline-block mt-5"}
+            newTab={true}
+          />
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24 overflow-x-hidden">
         <motion.div
           variants={fadeInBottom()}
           initial="hidden"
           whileInView="visible"
         >
           <Heading
-            heading={"Benefits Of Investment"}
+            heading={"Our Clients"}
             extraClasses={"text-center text-[#131333]"}
           />
-          <SubHeading
-            heading={
-              "Clarinet accustomed. Would legs of framework officers. We've to morning like a contracting him"
-            }
-            extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
-          />
-        </motion.div>
 
-        <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10 items-center">
-          <motion.div
-            className="col-span-12 md:col-span-6 lg:col-span-4 border rounded-xl"
-            variants={fadeInBottom()}
-            initial="hidden"
-            whileInView="visible"
+          <Swiper
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            slidesPerView={3}
+            spaceBetween={10}
+            breakpoints={{
+              990: {
+                slidesPerView: 6,
+                spaceBetween: 10,
+              },
+              640: {
+                slidesPerView: 5,
+                spaceBetween: 10,
+              },
+            }}
+            modules={[Autoplay]}
+            className="mySwiper mt-10"
           >
-            <figure>
-              <img
-                src="../../../../images/blogs/blog.png"
-                alt="image"
-                className="rounded-t-xl"
-              />
-            </figure>
-            <div className="p-5">
-              <h3 className="text-primary text-xl font-semibold mb-2">
-                Strategy & Business
-              </h3>
-              <p className="text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Assumenda, quam. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Assumenda, quam.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div
-            className="col-span-12 md:col-span-6 lg:col-span-4 border rounded-xl"
-            variants={fadeInBottom()}
-            initial="hidden"
-            whileInView="visible"
-          >
-            <figure>
-              <img
-                src="../../../../images/blogs/blog.png"
-                alt="image"
-                className="rounded-t-xl"
-              />
-            </figure>
-            <div className="p-5">
-              <h3 className="text-primary text-xl font-semibold mb-2">
-                Strategy & Business
-              </h3>
-              <p className="text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Assumenda, quam. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Assumenda, quam.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div
-            className="col-span-12 md:col-span-6 lg:col-span-4 border rounded-xl"
-            variants={fadeInBottom()}
-            initial="hidden"
-            whileInView="visible"
-          >
-            <figure>
-              <img
-                src="../../../../images/blogs/blog.png"
-                alt="image"
-                className="rounded-t-xl"
-              />
-            </figure>
-            <div className="p-5">
-              <h3 className="text-primary text-xl font-semibold mb-2">
-                Strategy & Business
-              </h3>
-              <p className="text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Assumenda, quam. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Assumenda, quam.
-              </p>
-            </div>
-          </motion.div>
-        </div>
+            {clientsData.map((client, i) => (
+              <SwiperSlide key={i}>
+                <figure>
+                  <img
+                    src={`../../../../images/partners/clients/${client.img}`}
+                    alt="logo"
+                  />
+                </figure>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </motion.div>
       </div>
     </>
   );

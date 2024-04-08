@@ -22,9 +22,13 @@ const TwoBlocks = () => {
             <div className="absolute -bottom-[50px] left-10 right-10 bg-white p-5 shadow-sm border rounded-xl">
               <h2 className="text-center text-3xl font-bold">Startups</h2>
               <p className="text-center text-gray-500 mt-3 max-w-sm mx-auto">
-                Raise Funds for your Startup Raise Funds for your Startup Raise
-                Funds for your Startup Raise Funds for your StartupRaise Funds
-                for your.
+                Launching a startup is an exhilarating journey, but securing the
+                necessary capital can be a daunting challenge. At O2 Angel
+                Investors, we understand the obstacles entrepreneurs face in
+                bringing their visionary ideas to fruition. Our mission is to
+                empower innovative founders like you by providing the resources
+                and support needed to transform your dreams into thriving
+                enterprises.
               </p>
             </div>
           </motion.div>

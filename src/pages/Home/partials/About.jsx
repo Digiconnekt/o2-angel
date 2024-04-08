@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import Heading from "../../../components/Typography/Heading";
 import ButtonLink from "../../../components/Buttons/ButtonLink";
-import SubHeading from "../../../components/Typography/SubHeading";
 import {
   fadeInBottom,
   fadeInLeft,
@@ -22,28 +21,20 @@ const About = () => {
             heading={"About Us"}
             extraClasses={"text-center text-[#131333]"}
           />
-          <SubHeading
-            heading={
-              "We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too."
-            }
-            extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
-          />
         </motion.div>
 
-        <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
+        <div className="grid grid-cols-12 items-center gap-y-10 md:gap-10 mt-12">
           <motion.div
-            className="col-span-12 md:col-span-6"
+            className="col-span-12 md:col-span-6 lg:col-span-7"
             variants={fadeInLeft()}
             initial="hidden"
             whileInView="visible"
           >
-            <h2 className="text-2xl font-semibold mb-3 text-[#131333]">
-              A faster way to do just about anything
-            </h2>
-            <h3 className="text-lg">
-              Clarinet accustomed. Would legs of framework officers. We've to
-              morning like a contracting him, the the to said in need gradually
-              wellfeigned.
+            <h3 className="text-md">
+              Our team at O2 utilizes advanced technologies and innovative tools
+              to craft high-quality code that operates flawlessly and
+              facilitates seamless collaboration and efficient maintenance
+              processes.
             </h3>
 
             <div className="flex mt-10 gap-5">
@@ -52,10 +43,21 @@ const About = () => {
               </figure>
               <div>
                 <h3 className="text-lg font-semibold">Rajesh Ranjan</h3>
-                <p className="text-[#C854C8]">Founder</p>
-                <p className="max-w-sm">
-                  Get peace of mind by choosing the best insurance provider for
-                  you.
+                <p className="text-[#C854C8] text-sm mb-3">Founder</p>
+                <p className="max-w-lg text-sm text-gray-500">
+                  A seasoned investment banking professional with over 20 years
+                  of experience in the origination, execution, and placement of
+                  equity shares and structured instruments. Rajesh has
+                  successfully raised over $2 billion for more than 100 SMEs
+                  across reputable firms in India. He is also an accomplished
+                  angel investor.
+                </p>
+                <p className="max-w-lg text-sm text-gray-500 mt-3">
+                  Rajesh holds a Master's in Management Studies (Finance), LLB,
+                  and BSc, and has completed CFA Level 1. His diverse expertise
+                  and proven track record make him well-equipped to lead O2
+                  Investors, delivering strategic investment solutions for
+                  sustainable growth.
                 </p>
               </div>
             </div>
@@ -67,7 +69,7 @@ const About = () => {
             />
           </motion.div>
           <motion.div
-            className="col-span-12 md:col-span-6"
+            className="col-span-12 md:col-span-6 lg:col-span-5"
             variants={fadeInRight()}
             initial="hidden"
             whileInView="visible"
