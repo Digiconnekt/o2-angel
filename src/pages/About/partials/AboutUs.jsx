@@ -17,7 +17,7 @@ const AboutUs = () => {
             <Heading heading={"About Us"} extraClasses={"text-[#131333]"} />
             <SubHeading
               heading={
-                "We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too. We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too. but it is easy easy to work with too. We use the latest technologies and tools"
+                "Our team at O2 utilizes advanced technologies and innovative tools to craft high-quality code that operates flawlessly and facilitates seamless collaboration and efficient maintenance processes."
               }
               extraClasses={"text-gray-500 mt-3 max-w-3xl mx-auto"}
             />

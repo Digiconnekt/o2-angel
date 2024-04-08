@@ -41,7 +41,9 @@ const Home = () => {
       <OneLiner />
       <Startups />
       <Investors />
-      <WhyChooseUs />
+      <div className="bg-gray-100">
+        <WhyChooseUs />
+      </div>
       <BenefitsOfInvestments />
       <WhatUserSays />
       <Blogs />

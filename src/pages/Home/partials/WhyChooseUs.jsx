@@ -45,50 +45,48 @@ const whyChooseUsData = [
 const WhyChooseUs = () => {
   return (
     <>
-      <div className="bg-gray-100 py-14 lg:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            variants={fadeInBottom()}
-            initial="hidden"
-            whileInView="visible"
-          >
-            <Heading
-              heading={"Why Choose Us"}
-              extraClasses={"text-center text-[#131333]"}
-            />
-            <SubHeading
-              heading={
-                "Unmatched Proficiency, Boundless Possibilities: Guiding You to Investment Triumphs"
-              }
-              extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
-            />
-          </motion.div>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24">
+        <motion.div
+          variants={fadeInBottom()}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <Heading
+            heading={"Why Choose Us"}
+            extraClasses={"text-center text-[#131333]"}
+          />
+          <SubHeading
+            heading={
+              "Unmatched Proficiency, Boundless Possibilities: Guiding You to Investment Triumphs"
+            }
+            extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
+          />
+        </motion.div>
 
-          <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
-            {whyChooseUsData.map((data, i) => (
-              <motion.div
-                key={i}
-                className="col-span-12 md:col-span-6 bg-white shadow-sm border p-7 rounded-2xl"
-                variants={fadeInBottom()}
-                initial="hidden"
-                whileInView="visible"
-              >
-                <div className="flex gap-2 flex-col lg:flex-row">
-                  <figure className="me-2">
-                    <img
-                      src="../../../../../images/about/our-team-icon-1.png"
-                      alt="icon"
-                      className="lg:w-24"
-                    />
-                  </figure>
-                  <div>
-                    <h3 className="text-lg font-semibold">{data.title}</h3>
-                    <p className="mt-1 text-gray-500">{data.content}</p>
-                  </div>
+        <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
+          {whyChooseUsData.map((data, i) => (
+            <motion.div
+              key={i}
+              className="col-span-12 md:col-span-6 bg-white shadow-sm border p-7 rounded-2xl"
+              variants={fadeInBottom()}
+              initial="hidden"
+              whileInView="visible"
+            >
+              <div className="flex gap-2 flex-col lg:flex-row">
+                <figure className="me-2">
+                  <img
+                    src="../../../../../images/about/our-team-icon-1.png"
+                    alt="icon"
+                    className="lg:w-24"
+                  />
+                </figure>
+                <div>
+                  <h3 className="text-lg font-semibold">{data.title}</h3>
+                  <p className="mt-1 text-gray-500">{data.content}</p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </>

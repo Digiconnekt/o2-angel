@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import Heading from "../../../components/Typography/Heading";
 import { fadeInLeft, fadeInRight } from "../../../utils/framerMotionHelper";
@@ -14,49 +15,23 @@ const AnglesNetwork = () => {
             whileInView="visible"
           >
             <Heading
-              heading={
-                "O2 Angels Network has been founded by Rajesh Ranjan and supported by his investment banking friends."
-              }
+              heading={"O2 Angels Network has been founded by Rajesh Ranjan"}
               extraClasses={"text-[#131333]"}
             />
 
-            <div className="flex gap-2 flex-row mt-5">
-              <figure className="me-2">
-                <img
-                  src="../../../../../images/home/counter-icon.png"
-                  alt="icon"
-                  className="w-32"
-                />
-              </figure>
-              <div>
-                <h3 className="text-lg font-semibold">About</h3>
-                <p className="mt-1 text-gray-500">
-                  Rajesh Ranjan is an investment banker with over two decades
-                  experience in origination, execution and placements of equity
-                  shares / structured instruments. He raised over USD 2 bn for
-                  more than 100 SME corporates.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-2 flex-row mt-5">
-              <figure className="me-2">
-                <img
-                  src="../../../../../images/home/counter-icon.png"
-                  alt="icon"
-                  className="w-32"
-                />
-              </figure>
-              <div>
-                <h3 className="text-lg font-semibold">About</h3>
-                <p className="mt-1 text-gray-500">
-                  Rajesh Ranjan is an investment banker with over two decades
-                  experience in origination, execution and placements of equity
-                  shares / structured instruments. He raised over USD 2 bn for
-                  more than 100 SME corporates.
-                </p>
-              </div>
-            </div>
+            <p className="mt-5 text-gray-500">
+              A seasoned investment banking professional with over 20 years of
+              experience in the origination, execution, and placement of equity
+              shares and structured instruments. Rajesh has successfully raised
+              over $2 billion for more than 100 SMEs across reputable firms in
+              India. He is also an accomplished angel investor.
+            </p>
+            <p className="mt-5 text-gray-500">
+              Rajesh holds a Master's in Management Studies (Finance), LLB, and
+              BSc, and has completed CFA Level 1. His diverse expertise and
+              proven track record make him well-equipped to lead O2 Investors,
+              delivering strategic investment solutions for sustainable growth.
+            </p>
           </motion.div>
           <motion.div
             className="col-span-12 md:col-span-6 lg:col-span-4 border shadow-sm p-5 rounded-xl"
