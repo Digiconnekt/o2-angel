@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const InputRadio = ({ label, options, value, onChange }) => {
+const InputRadio = ({ label, options, value, onChange, error }) => {
   const handleChange = (event) => {
     onChange(event.target.value);
   };
@@ -31,6 +31,11 @@ const InputRadio = ({ label, options, value, onChange }) => {
             </div>
           ))}
         </div>
+        {error && (
+          <span className="text-xs text-red-400 ms-1">
+            {error || "field is required"}
+          </span>
+        )}
       </div>
     </>
   );

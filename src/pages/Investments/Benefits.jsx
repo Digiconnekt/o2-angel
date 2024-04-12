@@ -11,39 +11,39 @@ import {
 const ourTeamData = [
   {
     icon: "../../../../../images/about/our-team-icon-1.png",
-    title: "Strategy & Business",
+    title: "Seasoned Investment Banking Expertise",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eius sequi nesciunt est dolores vel dolore impedit rerum sit ullam!",
+      "Our team is backed by a large number of seasoned investment bankers, bringing a wealth of knowledge and experience to the table.",
   },
   {
     icon: "../../../../../images/about/our-team-icon-1.png",
-    title: "Strategy & Business",
+    title: "Three Decades of Fundraising and SME Support",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eius sequi nesciunt est dolores vel dolore impedit rerum sit ullam!",
+      "With a combined experience of over three decades, our team has a proven track record in successfully raising funds and supporting small and medium-sized enterprises (SMEs) in their growth journey.",
   },
   {
-    icon: "../../../../../images/about/our-team-icon-2.png",
-    title: "Strategy & Business",
+    icon: "../../../../../images/about/our-team-icon-1.png",
+    title: "End-to-End Investment Lifecycle Management",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eius sequi nesciunt est dolores vel dolore impedit rerum sit ullam!",
+      "Our expertise spans the entire investment lifecycle, from proactive deal sourcing and due diligence to facilitating exits, ensuring a comprehensive and well-rounded approach.",
   },
   {
-    icon: "../../../../../images/about/our-team-icon-2.png",
-    title: "Strategy & Business",
+    icon: "../../../../../images/about/our-team-icon-1.png",
+    title: "Strong Due Diligence and Compliance Prowess",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eius sequi nesciunt est dolores vel dolore impedit rerum sit ullam!",
+      "Our team boasts a strong background in conducting thorough due diligence and ensuring compliance with regulatory requirements, safeguarding the interests of our investors and portfolio companies.",
   },
   {
-    icon: "../../../../../images/about/our-team-icon-3.png",
-    title: "Strategy & Business",
+    icon: "../../../../../images/about/our-team-icon-1.png",
+    title: "Diverse Fundraising Experience",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eius sequi nesciunt est dolores vel dolore impedit rerum sit ullam!",
+      "We have extensive experience in raising funds from various sources, including private markets (private equity, venture capital, and qualified institutional buyers), public markets (initial public offerings and rights issues), and financial institutions, leveraging our deep understanding of corporate finance.",
   },
   {
-    icon: "../../../../../images/about/our-team-icon-3.png",
-    title: "Strategy & Business",
+    icon: "../../../../../images/about/our-team-icon-1.png",
+    title: "Proven Track Record in Startup Investments",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eius sequi nesciunt est dolores vel dolore impedit rerum sit ullam!",
+      "The core members of our team have a demonstrated history of successfully investing in over 25 startups and high-growth global companies, bringing valuable insights and a proven investment strategy to the table.",
   },
 ];
 
@@ -52,9 +52,7 @@ const Benefits = () => {
     <>
       <SectionBanner
         title={"Benefits Of Investments"}
-        subTitle={
-          "Clarinet accustomed. Would legs of framework officers. We've to morning like a contracting him"
-        }
+        subTitle={"Maximizing Returns, Minimizing Risks"}
         bgImg={"../../../../images/about/section-banner.jpg"}
       />
 
@@ -69,7 +67,7 @@ const Benefits = () => {
             <Heading heading={"Benefits"} extraClasses={"text-[#131333]"} />
             <SubHeading
               heading={
-                "We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too. We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too. but it is easy easy to work with too. We use the latest technologies and tools"
+                "At O2 Angels, our structured investment process delivers a range of benefits, ensuring a rewarding experience for our angels. Through rigorous due diligence, collaborative decision-making, and regulatory compliance, we empower informed choices while mitigating risks. Our dedicated support and performance updates foster transparency. By employing our expertise and network, we unlock new growth opportunities, paving the way for success. Invest with confidence and unlock the full potential of angel investing with us."
               }
               extraClasses={"text-gray-500 mt-3 max-w-3xl mx-auto"}
             />
@@ -102,7 +100,7 @@ const Benefits = () => {
               Our Team
             </span>
             <Heading
-              heading={"Meet our awesome and professional team"}
+              heading={"Meet Our Awesome and Professional Team"}
               extraClasses={"text-[#131333] text-center"}
             />
           </motion.div>
@@ -116,15 +114,15 @@ const Benefits = () => {
                 initial="hidden"
                 whileInView="visible"
               >
-                <div className="flex gap-2 flex-col lg:flex-row">
-                  <figure className="me-2">
+                <div className="grid grid-cols-12 gap-2 lg:gap-x-0">
+                  <figure className="col-span-12 sm:col-span-2">
                     <img
                       src="../../../../../images/about/our-team-icon-1.png"
                       alt="icon"
-                      className="lg:w-24"
+                      className="w-14 h-14 object-contain"
                     />
                   </figure>
-                  <div>
+                  <div className="col-span-12 sm:col-span-10">
                     <h3 className="text-lg font-semibold">{data.title}</h3>
                     <p className="mt-1 text-gray-500">{data.content}</p>
                   </div>
@@ -160,7 +158,7 @@ const Benefits = () => {
             <Heading heading={"Benefits"} extraClasses={"text-[#131333]"} />
             <SubHeading
               heading={
-                "We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too. We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too. but it is easy easy to work with too. We use the latest technologies and tools"
+                "At O2 Angels, the benefits of investing with us are amplified by our seasoned team's expertise. Backed by investment bankers and three decades of fundraising experience, we conduct thorough investigations and ensure compliance adherence. Our end-to-end lifecycle management, from deal sourcing to exits, is driven by a team with a proven track record of investing in over 25 startups. Leverage our diverse fundraising proficiency, spanning private equity to public markets, and deep corporate finance knowledge for a rewarding investment journey."
               }
               extraClasses={"text-gray-500 mt-3 max-w-3xl mx-auto"}
             />

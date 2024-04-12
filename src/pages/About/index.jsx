@@ -8,9 +8,6 @@ const About = () => {
     <>
       <SectionBanner
         title={"About Us"}
-        subTitle={
-          "Clarinet accustomed. Would legs of framework officers. We've to morning like a contracting him"
-        }
         bgImg={"../../../../images/about/section-banner.jpg"}
       />
 

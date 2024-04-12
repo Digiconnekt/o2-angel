@@ -4,63 +4,99 @@ import SubHeading from "../../components/Typography/SubHeading";
 import { fadeInBottom, fadeInRight } from "../../utils/framerMotionHelper";
 import SectionBanner from "../../components/SectionBanner";
 
-const ourTeamData = [
+const investmentProcessData = [
   {
-    icon: "../../../../../images/about/our-team-icon-1.png",
-    title: "Strategy & Business",
+    title: "Deal Sourcing",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eius sequi nesciunt est dolores vel dolore impedit rerum sit ullam!",
+      "Proactively searches for potential investment opportunities through various channels such as networking events, referrals, online platforms, and industry connections.",
+    icon: "../../../../images/home/benefits-icon.png",
   },
   {
-    icon: "../../../../../images/about/our-team-icon-1.png",
-    title: "Strategy & Business",
+    title: "Deal Screening",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eius sequi nesciunt est dolores vel dolore impedit rerum sit ullam!",
+      "Evaluate incoming opportunities based on predetermined criteria to filter out unsuitable investments and focus on those aligned with our investment thesis and objectives.",
+    icon: "../../../../images/home/benefits-icon.png",
   },
   {
-    icon: "../../../../../images/about/our-team-icon-2.png",
-    title: "Strategy & Business",
+    title: "Scouting Lead Investor",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eius sequi nesciunt est dolores vel dolore impedit rerum sit ullam!",
+      "Identify a lead investor who will collaborate closely with the angel group throughout the investment process, providing expertise and guidance.",
+    icon: "../../../../images/home/benefits-icon.png",
   },
   {
-    icon: "../../../../../images/about/our-team-icon-2.png",
-    title: "Strategy & Business",
+    title: "Founder Call with Angels",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eius sequi nesciunt est dolores vel dolore impedit rerum sit ullam!",
+      "Conduct initial discussions with the founders to understand their business, vision, and growth potential, allowing angels to gauge interest and alignment.",
+    icon: "../../../../images/home/benefits-icon.png",
   },
   {
-    icon: "../../../../../images/about/our-team-icon-3.png",
-    title: "Strategy & Business",
+    title: "Commitment from Angels",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eius sequi nesciunt est dolores vel dolore impedit rerum sit ullam!",
+      "Secure commitment from interested angels to participate in the investment round, outlining individual investment amounts and terms.",
+    icon: "../../../../images/home/benefits-icon.png",
   },
   {
-    icon: "../../../../../images/about/our-team-icon-3.png",
-    title: "Strategy & Business",
+    title: "Drill Down Call",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate eius sequi nesciunt est dolores vel dolore impedit rerum sit ullam!",
+      "Conduct in-depth discussions with the founders to delve into specific aspects of the business, addressing any outstanding questions or concerns raised by the angel investors.",
+    icon: "../../../../images/home/benefits-icon.png",
+  },
+  {
+    title: "Due Diligence, Angels KYC",
+    content:
+      "Conduct thorough due diligence on the company's finances, operations, market potential, and legal aspects while ensuring compliance with Know Your Customer (KYC) regulations for all participating angels.",
+    icon: "../../../../images/home/benefits-icon.png",
+  },
+  {
+    title: "DD Report Review",
+    content:
+      "Review and analyze the due diligence report compiled by the team, highlighting key findings and potential risks associated with the investment opportunity.",
+    icon: "../../../../images/home/benefits-icon.png",
+  },
+  {
+    title: "SHA Review",
+    content:
+      "Review and negotiate the Shareholders Agreement (SHA) to define the rights, obligations, and governance structure for both the investors and the founders.",
+    icon: "../../../../images/home/benefits-icon.png",
+  },
+  {
+    title: "SHA Execution",
+    content:
+      "Finalize and execute the Shareholders Agreement once all parties are in agreement with the terms and conditions outlined, formalizing the investment commitment.",
+    icon: "../../../../images/home/benefits-icon.png",
+  },
+  {
+    title: "Fund Transfer (Upon receipt of at least 50% of fund requirements)",
+    content:
+      "Transfer funds from the participating angels to the designated escrow account, ensuring that at least 50% of the total fund requirements are secured before proceeding further.",
+    icon: "../../../../images/home/benefits-icon.png",
+  },
+  {
+    title: "Share Certificate & MIS",
+    content:
+      "Issue share certificates to the angel investors reflecting their ownership in the company and provide regular updates and reporting through a Management Information System (MIS) to keep investors informed about the performance of their investment.",
+    icon: "../../../../images/home/benefits-icon.png",
   },
 ];
 
 const benefitsData = [
   {
     icon: "../../../../images/home/benefits-icon.png",
-    title: "Benefit 1",
+    title: "Comprehensive Due Diligence",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et eiusmod tempor incididunt ut labore et",
+      "Our rigorous due diligence process involves a thorough evaluation of the company's finances, operations, market potential, and legal aspects. This in-depth analysis helps identify potential risks and opportunities, enabling our angels to make informed investment decisions.",
   },
   {
     icon: "../../../../images/home/benefits-icon.png",
-    title: "Benefit 2",
+    title: "Collaborative Approach",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et eiusmod tempor incididunt ut labore et",
+      "By involving a dedicated lead investor and facilitating open discussions between founders and angels, our process fosters a collaborative environment. This collaborative approach ensures that expertise and insights are shared, enhancing the investment experience and increasing the chances of success.",
   },
   {
     icon: "../../../../images/home/benefits-icon.png",
-    title: "Benefit 3",
+    title: "Regulatory Compliance and Risk Mitigation",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et eiusmod tempor incididunt ut labore et",
+      "Adherence to regulatory requirements, such as Know Your Customer (KYC) guidelines, and the inclusion of robust legal documentation, like the Shareholders' Agreement, help mitigate risks and protect the interests of both investors and founders. This commitment to compliance and risk management provides peace of mind to our angels.",
   },
 ];
 
@@ -69,9 +105,7 @@ const Process = () => {
     <>
       <SectionBanner
         title={"Investments Process"}
-        subTitle={
-          "Clarinet accustomed. Would legs of framework officers. We've to morning like a contracting him"
-        }
+        subTitle={"Structured Pathway to Angel Investment Success"}
         bgImg={"../../../../images/about/section-banner.jpg"}
       />
 
@@ -85,19 +119,23 @@ const Process = () => {
             Our Process
           </span>
           <Heading
-            heading={" Check our Investment Process"}
+            heading={" Check Our Investment Process"}
             extraClasses={"text-[#131333] text-center"}
           />
           <SubHeading
             heading={
-              "We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too."
+              "At O2 Angels, we follow a rigorous and structured investment process to identify promising startups and facilitate investment opportunities for our network of angels. Our streamlined approach ensures thorough evaluation, due diligence, and alignment with our investment objectives."
             }
-            extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
+            extraClasses={"text-center text-gray-500 mt-3 max-w-4xl mx-auto"}
+          />
+          <SubHeading
+            heading={"The process encompasses the following key stages:"}
+            extraClasses={"text-center text-gray-500 mt-3 max-w-4xl mx-auto"}
           />
         </motion.div>
 
         <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
-          {ourTeamData.map((data, i) => (
+          {investmentProcessData.map((data, i) => (
             <motion.div
               key={i}
               className="col-span-12 md:col-span-6 bg-white shadow-sm border p-7 rounded-2xl"
@@ -105,15 +143,15 @@ const Process = () => {
               initial="hidden"
               whileInView="visible"
             >
-              <div className="flex gap-2 flex-col lg:flex-row">
-                <figure className="me-2">
+              <div className="grid grid-cols-12 gap-2 lg:gap-x-0">
+                <figure className="col-span-12 sm:col-span-2">
                   <img
                     src="../../../../../images/about/our-team-icon-1.png"
                     alt="icon"
-                    className="lg:w-24"
+                    className="w-14 h-14 object-contain"
                   />
                 </figure>
-                <div>
+                <div className="col-span-12 sm:col-span-10">
                   <h3 className="text-lg font-semibold">{data.title}</h3>
                   <p className="mt-1 text-gray-500">{data.content}</p>
                 </div>
@@ -142,22 +180,22 @@ const Process = () => {
               whileInView="visible"
             >
               <Heading
-                heading={" Check our Investment Process"}
+                heading={" Investment Process"}
                 extraClasses={"text-[#131333]"}
               />
               <p className="mt-3 text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Voluptate fuga adipisci, nostrum expedita corporis veritatis in
-                dolorum vero dolores quo autem suscipit sit excepturi quibusdam
-                consequatur explicabo et enim commodi quia laudantium obcaecati
-                eum! Delectus dolore voluptates, quidem dicta a officiis, aut
-                facilis assumenda, libero tempore vero aspernatur laboriosam
-                nostrum!
+                At O2 Angel, we follow a structured and comprehensive investment
+                process designed to maximize returns and reduce risks. From
+                proactive deal sourcing and rigorous screening to in-depth due
+                diligence and legal documentation, our approach ensures a
+                thorough evaluation of every opportunity.
               </p>
               <p className="mt-3 text-gray-500">
-                dolorum vero dolores quo autem suscipit sit excepturi quibusdam
-                consequatur explicabo et enim commodi quia laudantium obcaecati
-                eum! Delectus dolore voluptates, quidem dicta a officiis, aut
+                We facilitate collaboration between our network of angels and a
+                dedicated lead investor, fostering expertise and guidance
+                throughout the journey. Open discussions with founders,
+                commitment from interested angels, and drill-down calls address
+                critical aspects of the business.
               </p>
             </motion.div>
           </div>
@@ -171,14 +209,8 @@ const Process = () => {
           whileInView="visible"
         >
           <Heading
-            heading={" Check our Investment Process"}
+            heading={"Benefits of Our Investment Process "}
             extraClasses={"text-[#131333] text-center"}
-          />
-          <SubHeading
-            heading={
-              "We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too."
-            }
-            extraClasses={"text-center text-gray-500 mt-3 max-w-3xl mx-auto"}
           />
         </motion.div>
 

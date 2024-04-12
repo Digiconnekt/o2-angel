@@ -31,9 +31,10 @@ const Footer = () => {
                 <img src="../../../images/logo.png" alt="O2 Angle" />
               </NavLink>
               <p className="text-gray-300 mt-3">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit, iusto. Accusantium rem numquam obcaecati officia
-                iusto ea repellendus nulla sit.
+                Our team at O2 utilizes advanced technologies and innovative
+                tools to craft high-quality code that operates flawlessly and
+                facilitates seamless collaboration and efficient maintenance
+                processes.
               </p>
             </motion.div>
 
@@ -121,19 +122,6 @@ const Footer = () => {
               </ul>
             </motion.div>
           </div>
-
-          <p className="text-gray-300 text-center md:text-end">
-            Site created & maintained by{" "}
-            <NavLink
-              to={"https://buildnetic.com"}
-              target="_blank"
-              className={
-                "text-primary hover:text-secondary duration-300 font-semibold"
-              }
-            >
-              Buildnetic
-            </NavLink>
-          </p>
         </div>
 
         <div className="border-t border-[#717272] mt-5"></div>

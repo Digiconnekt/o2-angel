@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import ButtonLink from "../../../components/Buttons/ButtonLink";
 import Heading from "../../../components/Typography/Heading";
@@ -23,72 +24,95 @@ const PartnerList = () => {
           />
           <SubHeading
             heading={
-              "We use the latest technologies and tools in order to create a better code that not only works great, but it is easy easy to work with too."
+              "Innovative Technologies, Fostering Collaborative Code Excellence."
             }
             extraClasses={"text-gray-500 mt-3 max-w-3xl mx-auto text-center"}
           />
         </motion.div>
 
-        <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-16">
+        <div className="grid grid-cols-12 items-center gap-y-10 md:gap-10 mt-20">
           <motion.div
-            className="col-span-12 md:col-span-6 rounded-xl p-10 group"
-            style={{
-              backgroundImage: "url('../../../../images/blogs/blog.png')",
-            }}
+            className="col-span-12 md:col-span-6 lg:col-span-4"
             variants={fadeInLeft()}
             initial="hidden"
             whileInView="visible"
           >
-            <div className="mt-32 bg-white p-10 rounded-xl">
-              <figure className="mb-5">
-                <img src="../../../../images/home/hero-icon-1.png" alt="icon" />
-              </figure>
-              <h3 className=" text-primary text-xl font-semibold">
-                Digital Marketing Partner- DigiConnekt
-              </h3>
-              <div className="">
-                <p className=" text-gray-500 mt-3 mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
-                  quasi repellat. Nulla ipsum laudantium impedit non iure
-                  suscipit porro tempore?
-                </p>
-                <ButtonLink
-                  to={"/partners/digiconnekt"}
-                  title={"Learn More"}
-                  extraClasses={"inline-block"}
-                />
-              </div>
-            </div>
+            <figure className="max-w-52 h-52 mx-auto">
+              <img
+                src="../../../../images/partners/digiconnekt/digiconnekt-logo.png"
+                alt="Digiconnekt"
+                className="w-full h-full object-contain"
+              />
+            </figure>
           </motion.div>
           <motion.div
-            className="col-span-12 md:col-span-6 rounded-xl p-10 group"
-            style={{
-              backgroundImage: "url('../../../../images/blogs/blog.png')",
-            }}
+            className="col-span-12 md:col-span-6 lg:col-span-8"
             variants={fadeInRight()}
             initial="hidden"
             whileInView="visible"
           >
-            <div className="mt-32 bg-white p-10 rounded-xl">
-              <figure className="mb-5">
-                <img src="../../../../images/home/hero-icon-1.png" alt="icon" />
-              </figure>
-              <h3 className=" text-primary text-xl font-semibold">
-                Technology Partner- Buildnetic
-              </h3>
-              <div className="">
-                <p className=" text-gray-500 mt-3 mb-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
-                  quasi repellat. Nulla ipsum laudantium impedit non iure
-                  suscipit porro tempore?
-                </p>
-                <ButtonLink
-                  to={"/partners/buildnetic"}
-                  title={"Learn More"}
-                  extraClasses={"inline-block"}
-                />
-              </div>
-            </div>
+            <h3 className="text-3xl font-semibold text-black mb-5">
+              Digital Marketing Partner -{" "}
+              <span className="text-[#C854C8]">Digiconnekt</span>
+            </h3>
+            <p className="text-gray-500">
+              DigiConnekt is a Singapore-based digital marketing agency.
+              Blending cutting-edge designs with seamless user interfaces, they
+              integrate the latest technologies to deliver the best digital
+              solutions that delight end-users. Their experts analyze trends and
+              harness new tools to boost your online presence and maximize
+              impact.
+            </p>
+
+            <ButtonLink
+              to={"https://digiconnekt.com"}
+              title={"Discover More"}
+              extraClasses={"inline-block mt-8"}
+              newTab={true}
+            />
+          </motion.div>
+        </div>
+
+        <div className="grid grid-cols-12 items-center gap-y-10 md:gap-10 mt-20">
+          <motion.div
+            className="col-span-12 md:col-span-6 lg:col-span-8"
+            variants={fadeInRight()}
+            initial="hidden"
+            whileInView="visible"
+          >
+            <h3 className="text-3xl font-semibold text-black mb-5">
+              Technology Partner-{" "}
+              <span className="text-[#C854C8]">Buildnetic</span>
+            </h3>
+            <p className="text-gray-500">
+              Buildnetic transforms visions into digital excellence. Experts in
+              branding, analytics, and consulting, they deliver user-centric
+              solutions and reliable systems. Their comprehensive services boost
+              customer engagement through cutting-edge strategies and
+              technologies. Maximize ROI and unlock innovation with Buildnetic's
+              digital prowess.
+            </p>
+
+            <ButtonLink
+              to={"https://buildnetic.com"}
+              title={"Discover More"}
+              extraClasses={"inline-block mt-8"}
+              newTab={true}
+            />
+          </motion.div>
+          <motion.div
+            className="col-span-12 md:col-span-6 lg:col-span-4"
+            variants={fadeInLeft()}
+            initial="hidden"
+            whileInView="visible"
+          >
+            <figure className="max-w-52 h-52 mx-auto">
+              <img
+                src="../../../../images/partners/buildnetic/buildnetic-logo.png"
+                alt="buildnetic"
+                className="w-full h-full object-contain"
+              />
+            </figure>
           </motion.div>
         </div>
       </div>

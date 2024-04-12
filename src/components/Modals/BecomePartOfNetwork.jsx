@@ -7,8 +7,12 @@ import Button from "../Buttons/Button";
 import ButtonOutline from "../Buttons/ButtonOutline";
 import InputRadio from "../Inputs/InputRadio";
 import { RxCross1 } from "react-icons/rx";
+import useBecomePartOfOurNetwork from "../../apis/BecomePartOfOurNetwork";
 
 export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
+  const { becomePartOfOurNetworkReq, data, error, isLoading } =
+    useBecomePartOfOurNetwork();
+
   const [pageNum, setPageNum] = useState(1);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -36,21 +40,23 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      country: "",
-      phone: "",
-      linkedinId: "",
-      annualInvestmentTarget: "",
-      currentPortfolioIncludes: "",
-      wouldYouLikeToActAsMentor: "",
-      disclaimer: "",
-    });
+    becomePartOfOurNetworkReq(formData);
 
-    console.log("formData", formData);
-    closeModal();
+    if (data) {
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        country: "",
+        phone: "",
+        linkedinId: "",
+        annualInvestmentTarget: "",
+        currentPortfolioIncludes: "",
+        wouldYouLikeToActAsMentor: "",
+        disclaimer: "",
+      });
+      closeModal();
+    }
   };
 
   return (
@@ -106,6 +112,11 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
                               onChange={(value) =>
                                 onChangeHandler("firstName", value)
                               }
+                              error={
+                                error?.errors?.firstName
+                                  ? error?.errors?.firstName[0]
+                                  : undefined
+                              }
                             />
                           </div>
                           <div className="col-span-12 sm:col-span-6">
@@ -117,6 +128,11 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
                               value={formData.lastName}
                               onChange={(value) =>
                                 onChangeHandler("lastName", value)
+                              }
+                              error={
+                                error?.errors?.lastName
+                                  ? error?.errors?.lastName[0]
+                                  : undefined
                               }
                             />
                           </div>
@@ -130,6 +146,11 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
                               onChange={(value) =>
                                 onChangeHandler("email", value)
                               }
+                              error={
+                                error?.errors?.email
+                                  ? error?.errors?.email[0]
+                                  : undefined
+                              }
                             />
                           </div>
                           <div className="col-span-12 sm:col-span-6">
@@ -141,6 +162,11 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
                               value={formData.country}
                               onChange={(value) =>
                                 onChangeHandler("country", value)
+                              }
+                              error={
+                                error?.errors?.country
+                                  ? error?.errors?.country[0]
+                                  : undefined
                               }
                             />
                           </div>
@@ -154,6 +180,11 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
                               onChange={(value) =>
                                 onChangeHandler("phone", value)
                               }
+                              error={
+                                error?.errors?.phone
+                                  ? error?.errors?.phone[0]
+                                  : undefined
+                              }
                             />
                           </div>
                           <div className="col-span-12">
@@ -165,6 +196,11 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
                               value={formData.linkedinId}
                               onChange={(value) =>
                                 onChangeHandler("linkedinId", value)
+                              }
+                              error={
+                                error?.errors?.linkedinId
+                                  ? error?.errors?.linkedinId[0]
+                                  : undefined
                               }
                             />
                           </div>
@@ -206,6 +242,11 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
                               onChange={(value) =>
                                 onChangeHandler("annualInvestmentTarget", value)
                               }
+                              error={
+                                error?.errors?.annualInvestmentTarget
+                                  ? error?.errors?.annualInvestmentTarget[0]
+                                  : undefined
+                              }
                             />
                           </div>
                           <div className="col-span-12">
@@ -222,6 +263,11 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
                                   "currentPortfolioIncludes",
                                   value
                                 )
+                              }
+                              error={
+                                error?.errors?.currentPortfolioIncludes
+                                  ? error?.errors?.currentPortfolioIncludes[0]
+                                  : undefined
                               }
                             />
                           </div>
@@ -254,6 +300,11 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
                                   value
                                 )
                               }
+                              error={
+                                error?.errors?.wouldYouLikeToActAsMentor
+                                  ? error?.errors?.wouldYouLikeToActAsMentor[0]
+                                  : undefined
+                              }
                             />
                           </div>
                           <div className="col-span-12">
@@ -272,6 +323,11 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
                               onChange={(value) =>
                                 onChangeHandler("disclaimer", value)
                               }
+                              error={
+                                error?.errors?.disclaimer
+                                  ? error?.errors?.disclaimer[0]
+                                  : undefined
+                              }
                             />
                           </div>
 
@@ -289,6 +345,7 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
                               title={"Submit"}
                               extraClasses={"w-full"}
                               onClick={submitHandler}
+                              isLoading={isLoading}
                             />
                           </div>
                         </>

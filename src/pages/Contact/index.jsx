@@ -18,7 +18,7 @@ const Contact = () => {
 
       <Map />
 
-      <Faqs />
+      {/* <Faqs /> */}
     </>
   );
 };

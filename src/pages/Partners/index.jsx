@@ -1,6 +1,4 @@
 import SectionBanner from "../../components/SectionBanner";
-import WhyChooseUs from "../Home/partials/WhyChooseUs";
-import OneLiner from "./partials/OneLiner";
 import PartnerList from "./partials/PartnerList";
 
 const index = () => {
@@ -8,17 +6,11 @@ const index = () => {
     <>
       <SectionBanner
         title={"Partners"}
-        subTitle={
-          "Clarinet accustomed. Would legs of framework officers. We've to morning like a contracting him"
-        }
+        subTitle={"Collaborating with Industry Leaders for Enhanced Success"}
         bgImg={"../../../../images/about/section-banner.jpg"}
       />
 
       <PartnerList />
-
-      <OneLiner />
-
-      <WhyChooseUs />
     </>
   );
 };
