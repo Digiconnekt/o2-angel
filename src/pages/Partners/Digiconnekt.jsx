@@ -7,7 +7,6 @@ import {
   fadeInLeft,
   fadeInRight,
 } from "../../utils/framerMotionHelper";
-import Counter from "../../components/Counter/Counter";
 import ButtonLink from "../../components/Buttons/ButtonLink";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -24,29 +23,6 @@ const whyChooseUsData = [
     icon: "../../../../images/home/benefits-icon.png",
     content:
       "We align to be a part of your journey to translate your visionary ideas into user-centric solutions. We aim to expand your brand name across dimensions, increase client engagement, and maximize ROI by leveraging existing approaches and integrating new technologies to drive digital excellence.",
-  },
-];
-
-const counterData = [
-  {
-    icon: "../../../../images/home/counter-icon.png",
-    heading: "Years In Business",
-    number: 10,
-  },
-  {
-    icon: "../../../../images/home/counter-icon.png",
-    heading: "Dedicated Developers",
-    number: 100,
-  },
-  {
-    icon: "../../../../images/home/counter-icon.png",
-    heading: "Global Clients",
-    number: 500,
-  },
-  {
-    icon: "../../../../images/home/counter-icon.png",
-    heading: "Outcomes Achieved",
-    number: 3000,
   },
 ];
 
@@ -165,10 +141,6 @@ const Digiconnekt = () => {
             />
           </motion.div>
         </div>
-      </div>
-
-      <div className="bg-[#262E38] overflow-x-hidden">
-        <Counter data={counterData} numColor={"text-white"} />
       </div>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24 overflow-hidden">

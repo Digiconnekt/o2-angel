@@ -17,6 +17,7 @@ const headerLinks = [
       { name: "Buildnetic", link: "/partners/buildnetic" },
     ],
   },
+  { name: "Portfolio", link: "/portfolio" },
   { name: "Blogs", link: "/blogs" },
   { name: "Contact", link: "/contact" },
 ];

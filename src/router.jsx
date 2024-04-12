@@ -7,15 +7,17 @@ import About from "./pages/About";
 import Partners from "./pages/Partners";
 import Digiconnekt from "./pages/Partners/Digiconnekt";
 import Buildnetic from "./pages/Partners/Buildnetic";
+import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 
 import Blogs from "./pages/Blogs";
 import Blog1 from "./pages/Blogs/Blog1";
+import Blog2 from "./pages/Blogs/Blog2";
 
-import Error404 from "./pages/Errors/Error404";
 import Process from "./pages/Investments/Process";
 import Benefits from "./pages/Investments/Benefits";
-import Blog2 from "./pages/Blogs/Blog2";
+
+import Error404 from "./pages/Errors/Error404";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/partners/buildnetic",
         element: <Buildnetic />,
+      },
+      {
+        path: "/portfolio",
+        element: <Portfolio />,
       },
       {
         path: "/blogs",

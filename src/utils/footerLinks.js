@@ -8,6 +8,10 @@ export const companyLinks = [
     to: "/about",
   },
   {
+    title: "Portfolio",
+    to: "/portfolio",
+  },
+  {
     title: "Blogs",
     to: "/blogs",
   },

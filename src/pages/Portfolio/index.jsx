@@ -1,17 +1,17 @@
 import SectionBanner from "../../components/SectionBanner";
-import BlogList from "./partials/BlogList";
+import PortfolioList from "./partials/PortfolioList";
 
-const Blogs = () => {
+const index = () => {
   return (
     <>
       <SectionBanner
-        title={"Blogs"}
+        title={"Portfolio"}
         bgImg={"../../../../images/about/section-banner.jpg"}
       />
 
-      <BlogList />
+      <PortfolioList />
     </>
   );
 };
 
-export default Blogs;
+export default index;
