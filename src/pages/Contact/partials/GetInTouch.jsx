@@ -17,7 +17,7 @@ import useContact from "../../../apis/contact";
 import { useEffect, useState } from "react";
 
 const GetInTouch = () => {
-  const { contactReq, data, error, isLoading } = useContact();
+  const { contactReq, data, error, setError, isLoading } = useContact();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -43,7 +43,7 @@ const GetInTouch = () => {
   };
 
   useEffect(() => {
-    data &&
+    if (data) {
       setFormData({
         name: "",
         email: "",
@@ -51,6 +51,8 @@ const GetInTouch = () => {
         subject: "",
         message: "",
       });
+      setError([]);
+    }
   }, [data]);
 
   return (

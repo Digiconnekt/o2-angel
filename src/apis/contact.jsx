@@ -23,7 +23,7 @@ const useContact = () => {
     }
   };
 
-  return { isLoading, data, error, contactReq };
+  return { isLoading, data, error, setError, contactReq };
 };
 
 export default useContact;

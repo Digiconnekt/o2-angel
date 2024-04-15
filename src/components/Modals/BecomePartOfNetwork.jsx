@@ -1,16 +1,16 @@
 /* eslint-disable react/prop-types */
 
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Input from "../Inputs/Input";
 import Button from "../Buttons/Button";
 import ButtonOutline from "../Buttons/ButtonOutline";
 import InputRadio from "../Inputs/InputRadio";
 import { RxCross1 } from "react-icons/rx";
-import useBecomePartOfOurNetwork from "../../apis/BecomePartOfOurNetwork";
+import useBecomePartOfOurNetwork from "../../apis/becomePartOfOurNetwork";
 
 export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
-  const { becomePartOfOurNetworkReq, data, error, isLoading } =
+  const { becomePartOfOurNetworkReq, data, error, setError, isLoading } =
     useBecomePartOfOurNetwork();
 
   const [pageNum, setPageNum] = useState(1);
@@ -36,12 +36,15 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
 
   function closeModal() {
     setIsOpen(false);
+    setPageNum(1);
   }
 
   const submitHandler = (e) => {
     e.preventDefault();
     becomePartOfOurNetworkReq(formData);
+  };
 
+  useEffect(() => {
     if (data) {
       setFormData({
         firstName: "",
@@ -56,8 +59,9 @@ export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
         disclaimer: "",
       });
       closeModal();
+      setError([]);
     }
-  };
+  }, [data]);
 
   return (
     <>

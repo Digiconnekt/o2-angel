@@ -2,18 +2,18 @@ import { useState } from "react";
 import useAxios from ".";
 import toast from "react-hot-toast";
 
-const useBecomePartOfOurNetwork = () => {
+const useShowcaseYourBusiness = () => {
   const axiosInstance = useAxios();
 
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
-  const becomePartOfOurNetworkReq = async (payload) => {
+  const showcaseYourBusinessReq = async (payload) => {
     try {
       setIsLoading(true);
       const res = await axiosInstance.post(
-        "/forms/become-part-of-our-network",
+        "/forms/showcase-your-business",
         payload
       );
       setData(res?.data);
@@ -26,7 +26,7 @@ const useBecomePartOfOurNetwork = () => {
     }
   };
 
-  return { isLoading, data, error, setError, becomePartOfOurNetworkReq };
+  return { isLoading, data, error, setError, showcaseYourBusinessReq };
 };
 
-export default useBecomePartOfOurNetwork;
+export default useShowcaseYourBusiness;
