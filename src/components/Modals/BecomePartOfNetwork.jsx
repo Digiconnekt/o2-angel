@@ -7,7 +7,7 @@ import Button from "../Buttons/Button";
 import ButtonOutline from "../Buttons/ButtonOutline";
 import InputRadio from "../Inputs/InputRadio";
 import { RxCross1 } from "react-icons/rx";
-import useBecomePartOfOurNetwork from "../../apis/becomePartOfOurNetwork";
+import useBecomePartOfOurNetwork from "../../apis/BecomePartOfOurNetwork";
 
 export default function BecomePartOfNetwork({ isOpen, setIsOpen }) {
   const { becomePartOfOurNetworkReq, data, error, setError, isLoading } =
