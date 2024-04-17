@@ -52,8 +52,8 @@ const Investors = () => {
           >
             <figure>
               <img
-                src="../../../../../images/about/about.png"
-                alt="about"
+                src="../../../../../images/home/investor.png"
+                alt="investor"
                 className="w-full"
               />
             </figure>

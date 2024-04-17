@@ -9,91 +9,91 @@ const investmentProcessData = [
     title: "Deal Sourcing",
     content:
       "Proactively searches for potential investment opportunities through various channels such as networking events, referrals, online platforms, and industry connections.",
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "1.png",
   },
   {
     title: "Deal Screening",
     content:
       "Evaluate incoming opportunities based on predetermined criteria to filter out unsuitable investments and focus on those aligned with our investment thesis and objectives.",
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "2.png",
   },
   {
     title: "Scouting Lead Investor",
     content:
       "Identify a lead investor who will collaborate closely with the angel group throughout the investment process, providing expertise and guidance.",
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "3.png",
   },
   {
     title: "Founder Call with Angels",
     content:
       "Conduct initial discussions with the founders to understand their business, vision, and growth potential, allowing angels to gauge interest and alignment.",
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "4.png",
   },
   {
     title: "Commitment from Angels",
     content:
       "Secure commitment from interested angels to participate in the investment round, outlining individual investment amounts and terms.",
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "5.png",
   },
   {
     title: "Drill Down Call",
     content:
       "Conduct in-depth discussions with the founders to delve into specific aspects of the business, addressing any outstanding questions or concerns raised by the angel investors.",
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "6.png",
   },
   {
     title: "Due Diligence, Angels KYC",
     content:
       "Conduct thorough due diligence on the company's finances, operations, market potential, and legal aspects while ensuring compliance with Know Your Customer (KYC) regulations for all participating angels.",
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "7.png",
   },
   {
     title: "DD Report Review",
     content:
       "Review and analyze the due diligence report compiled by the team, highlighting key findings and potential risks associated with the investment opportunity.",
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "8.png",
   },
   {
     title: "SHA Review",
     content:
       "Review and negotiate the Shareholders Agreement (SHA) to define the rights, obligations, and governance structure for both the investors and the founders.",
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "9.png",
   },
   {
     title: "SHA Execution",
     content:
       "Finalize and execute the Shareholders Agreement once all parties are in agreement with the terms and conditions outlined, formalizing the investment commitment.",
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "10.png",
   },
   {
     title: "Fund Transfer (Upon receipt of at least 50% of fund requirements)",
     content:
       "Transfer funds from the participating angels to the designated escrow account, ensuring that at least 50% of the total fund requirements are secured before proceeding further.",
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "11.png",
   },
   {
     title: "Share Certificate & MIS",
     content:
       "Issue share certificates to the angel investors reflecting their ownership in the company and provide regular updates and reporting through a Management Information System (MIS) to keep investors informed about the performance of their investment.",
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "12.png",
   },
 ];
 
 const benefitsData = [
   {
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "comprehensive.png",
     title: "Comprehensive Due Diligence",
     content:
       "Our rigorous due diligence process involves a thorough evaluation of the company's finances, operations, market potential, and legal aspects. This in-depth analysis helps identify potential risks and opportunities, enabling our angels to make informed investment decisions.",
   },
   {
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "collaborative-approach.png",
     title: "Collaborative Approach",
     content:
       "By involving a dedicated lead investor and facilitating open discussions between founders and angels, our process fosters a collaborative environment. This collaborative approach ensures that expertise and insights are shared, enhancing the investment experience and increasing the chances of success.",
   },
   {
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "regulatory-compliance.png",
     title: "Regulatory Compliance and Risk Mitigation",
     content:
       "Adherence to regulatory requirements, such as Know Your Customer (KYC) guidelines, and the inclusion of robust legal documentation, like the Shareholders' Agreement, help mitigate risks and protect the interests of both investors and founders. This commitment to compliance and risk management provides peace of mind to our angels.",
@@ -106,7 +106,7 @@ const Process = () => {
       <SectionBanner
         title={"Investments Process"}
         subTitle={"Structured Pathway to Angel Investment Success"}
-        bgImg={"../../../../images/about/section-banner.jpg"}
+        bgImg={"../../../../images/investments/process/banner.png"}
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24">
@@ -146,7 +146,7 @@ const Process = () => {
               <div className="grid grid-cols-12 gap-2 lg:gap-x-0">
                 <figure className="col-span-12 sm:col-span-2">
                   <img
-                    src="../../../../../images/about/our-team-icon-1.png"
+                    src={`../../../../images/investments/process/process/${data.icon}`}
                     alt="icon"
                     className="w-14 h-14 object-contain"
                   />
@@ -224,8 +224,12 @@ const Process = () => {
               whileInView="visible"
             >
               <figure>
-                <img src={benefit.icon} alt="icon" className="mx-auto" />
-                <h3 className="text-lg font-semibold text-center">
+                <img
+                  src={`../../../../images/investments/process/benefits/${benefit.icon}`}
+                  alt="icon"
+                  className="mx-auto"
+                />
+                <h3 className="text-lg font-semibold text-center mt-3">
                   {benefit.title}
                 </h3>
                 <p className="text-center mt-1">{benefit.content}</p>

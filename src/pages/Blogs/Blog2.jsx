@@ -10,7 +10,7 @@ const Blog2 = () => {
         title={
           "Exploring Alternative Investments: Diversifying Your Portfolio for Growth"
         }
-        bgImg={"../../../../images/about/section-banner.jpg"}
+        bgImg={"../../../../images/blogs/banner.jpg"}
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24">

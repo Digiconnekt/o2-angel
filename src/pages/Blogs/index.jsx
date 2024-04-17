@@ -6,7 +6,7 @@ const Blogs = () => {
     <>
       <SectionBanner
         title={"Blogs"}
-        bgImg={"../../../../images/about/section-banner.jpg"}
+        bgImg={"../../../../images/blogs/banner.jpg"}
       />
 
       <BlogList />

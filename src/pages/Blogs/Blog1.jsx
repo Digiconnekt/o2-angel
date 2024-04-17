@@ -8,7 +8,7 @@ const Blog1 = () => {
     <>
       <SectionBanner
         title={"Navigating the Investment Landscape: A Beginner's Guide"}
-        bgImg={"../../../../images/about/section-banner.jpg"}
+        bgImg={"../../../../images/blogs/banner.jpg"}
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24">

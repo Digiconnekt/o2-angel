@@ -16,8 +16,8 @@ const Startups = () => {
           >
             <figure>
               <img
-                src="../../../../../images/about/about.png"
-                alt="about"
+                src="../../../../../images/home/startup-img.png"
+                alt="Startup"
                 className="w-full"
               />
             </figure>

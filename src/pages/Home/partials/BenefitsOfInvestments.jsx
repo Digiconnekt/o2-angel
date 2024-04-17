@@ -5,61 +5,61 @@ import { fadeInBottom } from "../../../utils/framerMotionHelper";
 
 const benefitsData = [
   {
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "wealth.png",
     title: "Wealth Accumulation",
     content:
       "Grow your wealth over time by earning attractive returns on your investments, helping you achieve your financial goals and secure a prosperous future.",
   },
   {
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "passive-income.png",
     title: "Passive Income Generation",
     content:
       "Invest in dividend-paying stocks, rental properties, and other income-generating assets to create regular streams of passive income.",
   },
   {
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "inflation-hedge.png",
     title: "Inflation Hedge",
     content:
       "Outpace inflation by investing in assets that appreciate in value, ensuring your savings maintain their purchasing power over the long term.",
   },
   {
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "portfolio-diversification.png",
     title: "Portfolio Diversification",
     content:
       "Diversify your investment portfolio across various asset classes, industries, and regions to spread risk and minimize the impact of market volatility.",
   },
   {
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "tax-optimization.png",
     title: "Tax Optimization",
     content:
       "Benefit from tax advantages offered by certain investment vehicles, optimizing your tax efficiency and maximizing your after-tax returns.",
   },
   {
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "goal-achievement.png",
     title: "Goal Achievement",
     content:
       "Realize your financial aspirations, whether it's saving for retirement, buying a home, funding education, or starting a business, by investing strategically.",
   },
   {
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "compound-growth.png",
     title: "Compound Growth",
     content:
       "Harness the power of compounding, allowing your investment returns to generate additional earnings over time for exponential portfolio growth.",
   },
   {
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "hedge-against.png",
     title: "Hedge Against Economic Uncertainty",
     content:
       "Invest in assets like gold, real estate, or bonds to protect your portfolio against economic downturns and market volatility, providing stability and security.",
   },
   {
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "financial-control.png",
     title: "Financial Control",
     content:
       "Take control of your financial future by actively managing your investments, making informed decisions, and adapting to changing market conditions.",
   },
   {
-    icon: "../../../../images/home/benefits-icon.png",
+    icon: "legacy-buildning.png",
     title: "Legacy Building",
     content:
       "Build a lasting legacy for future generations by investing wisely, and providing financial security and stability for your loved ones.",
@@ -97,8 +97,12 @@ const BenefitsOfInvestments = () => {
               whileInView="visible"
             >
               <figure>
-                <img src={benefit.icon} alt="icon" className="mx-auto" />
-                <h3 className="text-lg font-semibold text-center">
+                <img
+                  src={`../../../../images/home/benefits/${benefit.icon}`}
+                  alt="icon"
+                  className="mx-auto"
+                />
+                <h3 className="text-lg font-semibold text-center mt-3">
                   {benefit.title}
                 </h3>
                 <p className="text-center mt-1">{benefit.content}</p>
