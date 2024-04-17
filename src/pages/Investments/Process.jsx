@@ -167,7 +167,7 @@ const Process = () => {
             <div className="col-span-12 md:col-span-6 lg:col-span-4">
               <figure className="h-full">
                 <img
-                  src="../../../../images/blogs/blog.png"
+                  src="../../../../images/investments/process/inv-process.jpg"
                   alt="image"
                   className="w-full h-full object-cover"
                 />
