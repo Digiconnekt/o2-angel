@@ -18,7 +18,7 @@ const Blog1 = () => {
           whileInView="visible"
         >
           <img
-            src="../../../../images/home/startup.png"
+            src="../../../../images/blogs/navigating-the-investment-landscape-a-beginners-guide.png"
             alt="blog"
             className="w-full"
           />

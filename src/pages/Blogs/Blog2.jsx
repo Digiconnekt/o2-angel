@@ -20,7 +20,7 @@ const Blog2 = () => {
           whileInView="visible"
         >
           <img
-            src="../../../../images/home/startup.png"
+            src="../../../../images/blogs/exploring-alternative-investments-diversifying-your-portfolio-for-growth.png"
             alt="blog"
             className="w-full"
           />
