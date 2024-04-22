@@ -12,6 +12,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { NavLink } from "react-router-dom";
+import { IoCallOutline } from "react-icons/io5";
+import { CiMail } from "react-icons/ci";
 
 const whyChooseUsData = [
   {
@@ -83,6 +86,37 @@ const clientsData = [
   },
   {
     img: "the-coding-trail.png",
+  },
+];
+
+const servicesData = [
+  {
+    icon: "seoIcon.png",
+    title: "Search Engine Optimization",
+  },
+  {
+    icon: "smoIcon.png",
+    title: "Social Media Optimization",
+  },
+  {
+    icon: "emailMarketingIcon.png",
+    title: "Email Marketing",
+  },
+  {
+    icon: "contentMarketingIcon.png",
+    title: "Content Marketing",
+  },
+  {
+    icon: "leadGenerationIcon.png",
+    title: "Lead Generation",
+  },
+  {
+    icon: "programmaticAdIcon.png",
+    title: "Programmatic Advertising",
+  },
+  {
+    icon: "ppcIcon.png",
+    title: "Pay Per Click",
   },
 ];
 
@@ -185,6 +219,69 @@ const Digiconnekt = () => {
             extraClasses={"inline-block mt-5"}
             newTab={true}
           />
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24 overflow-hidden">
+        <motion.div
+          variants={fadeInBottom()}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <Heading
+            heading={"Services"}
+            extraClasses={"text-center text-[#131333]"}
+          />
+        </motion.div>
+
+        <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
+          {servicesData.map((service, i) => (
+            <motion.div
+              key={i}
+              className="col-span-12 md:col-span-6 lg:col-span-4 flex items-center gap-5 border p-5 rounded-xl"
+              variants={fadeInBottom()}
+              initial="hidden"
+              whileInView="visible"
+            >
+              <figure className="w-14 h-14">
+                <img
+                  src={`../../../../images/partners/digiconnekt/services/${service.icon}`}
+                  alt="icon"
+                  className=""
+                />
+              </figure>
+              <p className="text-xl font-semibold flex-1">{service.title}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-[#262E38] overflow-x-hidden py-14">
+        <div className="mx-auto text-center max-w-7xl px-6 lg:px-8">
+          <h2 className="text-3xl md:text-5xl text-white font-bold text-center leading-[40px] md:leading-[70px]">
+            Get In Touch
+          </h2>
+          <div className="mt-5">
+            <NavLink
+              to={"tel:+919953306911"}
+              className={
+                "block sm:inline-block bg-primary text-white py-3 px-5 rounded-3xl hover:bg-secondary text-md font-semibold"
+              }
+            >
+              <IoCallOutline className="inline-block me-2" />
+              Call Us
+            </NavLink>
+
+            <NavLink
+              to={"mailto:info@digiconnekt.com"}
+              className={
+                "block sm:inline-block bg-primary text-white py-3 px-5 rounded-3xl hover:bg-secondary text-md font-semibold sm:ms-5 mt-3 sm:mt-0"
+              }
+            >
+              <CiMail className="inline-block me-2" />
+              Mail Us
+            </NavLink>
+          </div>
         </div>
       </div>
 

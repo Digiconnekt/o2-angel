@@ -13,6 +13,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { NavLink } from "react-router-dom";
+import { IoCallOutline } from "react-icons/io5";
+import { CiMail } from "react-icons/ci";
 
 const whyChooseUsData = [
   {
@@ -122,6 +125,69 @@ const clientsData = [
   },
   {
     img: "the-coding-trail.png",
+  },
+];
+
+const servicesData = [
+  {
+    icon: "web-dev.png",
+    title: "Web Development",
+  },
+  {
+    icon: "mob-dev.png",
+    title: "Mobility Solutions",
+  },
+  {
+    icon: "cloud-computing.png",
+    title: "Cloud Computing",
+  },
+  {
+    icon: "e-learning.png",
+    title: "E-Learning Solutions",
+  },
+  {
+    icon: "cyber-security.png",
+    title: "Cyber Security",
+  },
+  {
+    icon: "business-inteligence.png",
+    title: "Business Intelligence Consulting",
+  },
+  {
+    icon: "e-commerce.png",
+    title: "E-commerce Solutions",
+  },
+  {
+    icon: "ui-ux.png",
+    title: "UI-UX Solutions",
+  },
+  {
+    icon: "custom-application.png",
+    title: "Custom Application Development",
+  },
+  {
+    icon: "software-test.png",
+    title: "Software Test Management",
+  },
+  {
+    icon: "devops.png",
+    title: "DevOps Solutions & Services",
+  },
+  {
+    icon: "product-re-engg.png",
+    title: "Product Re-Engineering",
+  },
+  {
+    icon: "dedicated-developer.png",
+    title: "Dedicated Developers",
+  },
+  {
+    icon: "data-analytics.png",
+    title: "Data Analytics",
+  },
+  {
+    icon: "testing.png",
+    title: "Testing",
   },
 ];
 
@@ -240,7 +306,70 @@ const Buildnetic = () => {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24 overflow-x-hidden">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24 overflow-hidden">
+        <motion.div
+          variants={fadeInBottom()}
+          initial="hidden"
+          whileInView="visible"
+        >
+          <Heading
+            heading={"Services"}
+            extraClasses={"text-center text-[#131333]"}
+          />
+        </motion.div>
+
+        <div className="grid grid-cols-12 gap-y-10 md:gap-10 mt-10">
+          {servicesData.map((service, i) => (
+            <motion.div
+              key={i}
+              className="col-span-12 md:col-span-6 lg:col-span-4 flex items-center gap-5 border p-5 rounded-xl"
+              variants={fadeInBottom()}
+              initial="hidden"
+              whileInView="visible"
+            >
+              <figure className="w-14 h-14">
+                <img
+                  src={`../../../../images/partners/buildnetic/services/${service.icon}`}
+                  alt="icon"
+                  className=""
+                />
+              </figure>
+              <p className="text-xl font-semibold flex-1">{service.title}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-[#262E38] overflow-x-hidden py-14">
+        <div className="mx-auto text-center max-w-7xl px-6 lg:px-8">
+          <h2 className="text-3xl md:text-5xl text-white font-bold text-center leading-[40px] md:leading-[70px]">
+            Get In Touch
+          </h2>
+          <div className="mt-5">
+            <NavLink
+              to={"tel:+919953306911"}
+              className={
+                "block sm:inline-block bg-primary text-white py-3 px-5 rounded-3xl hover:bg-secondary text-md font-semibold"
+              }
+            >
+              <IoCallOutline className="inline-block me-2" />
+              Call Us
+            </NavLink>
+
+            <NavLink
+              to={"mailto:sales@buildnetic.com"}
+              className={
+                "block sm:inline-block bg-primary text-white py-3 px-5 rounded-3xl hover:bg-secondary text-md font-semibold sm:ms-5 mt-3 sm:mt-0"
+              }
+            >
+              <CiMail className="inline-block me-2" />
+              Mail Us
+            </NavLink>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-14 lg:py-24 overflow-hidden">
         <motion.div
           variants={fadeInBottom()}
           initial="hidden"
